@@ -1,0 +1,126 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 18.03.20 19:10
+Description: Unexpected error
+
+java.lang.NoSuchFieldError: field_70713_bf
+	at alfheim.common.core.util.ExtensionsKt.getActivePotionEffect(Extensions.kt:59)
+	at alfheim.client.gui.GUIIceLens.onOverlayRendering(GUIIceLens.kt:20)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_326_GUIIceLens_onOverlayRendering_Post.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.GuiIngameForge.post(GuiIngameForge.java:905)
+	at net.minecraftforge.client.GuiIngameForge.renderHelmet(GuiIngameForge.java:263)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:120)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1114)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at alfheim.common.core.util.ExtensionsKt.getActivePotionEffect(Extensions.kt:59)
+	at alfheim.client.gui.GUIIceLens.onOverlayRendering(GUIIceLens.kt:20)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_326_GUIIceLens_onOverlayRendering_Post.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.GuiIngameForge.post(GuiIngameForge.java:905)
+	at net.minecraftforge.client.GuiIngameForge.renderHelmet(GuiIngameForge.java:263)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:120)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player428'/562, l='MpServer', x=-646,93, y=12,48, z=106,82]]
+	Chunk stats: MultiplayerChunkCache: 0, 0
+	Level seed: 6380064133238915015
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-685,4,107), Chunk: (at 3,0,11 in -43,6; contains blocks -688,0,96 to -673,255,111), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Level time: 2159402 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 1 total; [EntityClientPlayerMP['Player428'/562, l='MpServer', x=-646,93, y=12,48, z=106,82]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 467079920 bytes (445 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 21 mods loaded, 21 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAAA	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHIJAAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAAA	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHIJAAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAAA	randommagics{0.3.8} [RandomMagics] (bin) 
+	UCHIJAAAAA	WorldEngine{1.1710.0} [WorldEngine] (Alfheim-BETA-26.jar) 
+	UCHIJAAAAA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJAAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAAA	alfheim{BETA} [Alfheim] (Alfheim-BETA-26.jar) 
+	UCHIJAAAAA	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UCHIJAAAAA	Avaritia{1.13} [Avaritia] (Avaritia-1.13.jar) 
+	UCHIJAAAAA	BrandonsCore{1.0.0.12} [Brandon's Core] (BrandonsCore-1.0.0.12.jar) 
+	UCHIJAAAAA	DraconicEvolution{1.0.2h} [Draconic Evolution] (Draconic-Evolution-1.7.10-1.0.2h.jar) 
+	UCHIJAAAAA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJAAAAA	thaumicenergistics{1.1.3.0} [Thaumic Energistics] (thaumicenergistics-1.1.3.0.jar) 
+	UCHIJAAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 441.41' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BuildCraftCore:OFF, BuildCraftTransport:OFF, BuildCraftBuilder:OFF, RF:ON, RFItem:ON, MFR:OFF, DSU:OFF, FZ:OFF, FMP:OFF, RB:OFF, CLApi:OFF, Waila:OFF, InvTweaks:OFF, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF, OpenComputers:OFF, PneumaticCraft:OFF
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 441.41, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

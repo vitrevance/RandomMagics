@@ -1,0 +1,117 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 16.03.20 18:12
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at randommagics.effects.EffectVoiceOfDeath.removeAttributesModifiersFromEntity(EffectVoiceOfDeath.java:32)
+	at net.minecraft.entity.EntityLivingBase.onFinishedPotionEffect(EntityLivingBase.java:788)
+	at net.minecraft.entity.EntityLivingBase.updatePotionEffects(EntityLivingBase.java:593)
+	at net.minecraft.entity.EntityLivingBase.onEntityUpdate(EntityLivingBase.java:336)
+	at net.minecraft.entity.EntityLiving.onEntityUpdate(EntityLiving.java:192)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:386)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1766)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at thaumcraft.common.entities.monster.boss.EntityThaumcraftBoss.onUpdate(EntityThaumcraftBoss.java:110)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.effects.EffectVoiceOfDeath.removeAttributesModifiersFromEntity(EffectVoiceOfDeath.java:32)
+	at net.minecraft.entity.EntityLivingBase.onFinishedPotionEffect(EntityLivingBase.java:788)
+	at net.minecraft.entity.EntityLivingBase.updatePotionEffects(EntityLivingBase.java:593)
+	at net.minecraft.entity.EntityLivingBase.onEntityUpdate(EntityLivingBase.java:336)
+	at net.minecraft.entity.EntityLiving.onEntityUpdate(EntityLiving.java:192)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:386)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1766)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at thaumcraft.common.entities.monster.boss.EntityThaumcraftBoss.onUpdate(EntityThaumcraftBoss.java:110)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Thaumcraft.CultistLeader (thaumcraft.common.entities.monster.boss.EntityCultistLeader)
+	Entity ID: 217888
+	Entity Name: Praetor Fertus the Infested
+	Entity's Exact location: -643,33, 4,00, 108,45
+	Entity's Block location: World: (-644,4,108), Chunk: (at 12,0,12 in -41,6; contains blocks -656,0,96 to -641,255,111), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Entity's Momentum: 0,15, -0,08, 0,01
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player658'/319, l='New World', x=-641,85, y=6,11, z=108,80]]
+	Chunk stats: ServerChunkCache: 1232 Drop: 0
+	Level seed: 6380064133238915015
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (-685,4,107), Chunk: (at 3,0,11 in -43,6; contains blocks -688,0,96 to -673,255,111), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Level time: 1993984 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 124519 (now: false), thunder time: 97895 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 655338824 bytes (624 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 16 mods loaded, 16 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.8} [RandomMagics] (bin) 
+	UCHIJAAAA	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UCHIJAAAA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJAAAA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	thaumicenergistics{1.1.3.0} [Thaumic Energistics] (thaumicenergistics-1.1.3.0.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BuildCraftCore:OFF, BuildCraftTransport:OFF, BuildCraftBuilder:OFF, RF:OFF, RFItem:OFF, MFR:OFF, DSU:OFF, FZ:OFF, FMP:OFF, RB:OFF, CLApi:OFF, Waila:OFF, InvTweaks:OFF, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF, OpenComputers:OFF, PneumaticCraft:OFF
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player658'/319, l='New World', x=-641,85, y=6,11, z=108,80]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

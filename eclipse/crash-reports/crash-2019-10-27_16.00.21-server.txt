@@ -1,0 +1,106 @@
+---- Minecraft Crash Report ----
+// Oh - I know what I did wrong!
+
+Time: 27.10.19 16:00
+Description: Ticking player
+
+java.lang.NullPointerException: Ticking player
+	at randommagics.effects.EffectStuckInTime.applyAttributesModifiersToEntity(EffectStuckInTime.java:48)
+	at net.minecraft.entity.EntityLivingBase.onNewPotionEffect(EntityLivingBase.java:767)
+	at net.minecraft.entity.EntityLivingBase.addPotionEffect(EntityLivingBase.java:712)
+	at randommagics.curses.CurseOutOfTime.doEffects(CurseOutOfTime.java:43)
+	at randommagics.curses.Curse.onUpdate(Curse.java:56)
+	at randommagics.customs.CustomExtendedEntityProperties.doCurses(CustomExtendedEntityProperties.java:214)
+	at randommagics.EventHandler.onLivingUpdate(EventHandler.java:348)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_60_EventHandler_onLivingUpdate_LivingUpdateEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.common.ForgeHooks.onLivingUpdate(ForgeHooks.java:289)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1765)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:327)
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:330)
+	at net.minecraft.network.NetHandlerPlayServer.processPlayer(NetHandlerPlayServer.java:329)
+	at net.minecraft.network.play.client.C03PacketPlayer.processPacket(C03PacketPlayer.java:37)
+	at net.minecraft.network.play.client.C03PacketPlayer.processPacket(C03PacketPlayer.java:111)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241)
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.effects.EffectStuckInTime.applyAttributesModifiersToEntity(EffectStuckInTime.java:48)
+	at net.minecraft.entity.EntityLivingBase.onNewPotionEffect(EntityLivingBase.java:767)
+	at net.minecraft.entity.EntityLivingBase.addPotionEffect(EntityLivingBase.java:712)
+	at randommagics.curses.CurseOutOfTime.doEffects(CurseOutOfTime.java:43)
+	at randommagics.curses.Curse.onUpdate(Curse.java:56)
+	at randommagics.customs.CustomExtendedEntityProperties.doCurses(CustomExtendedEntityProperties.java:214)
+	at randommagics.EventHandler.onLivingUpdate(EventHandler.java:348)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_60_EventHandler_onLivingUpdate_LivingUpdateEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.common.ForgeHooks.onLivingUpdate(ForgeHooks.java:289)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1765)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:327)
+
+-- Player being ticked --
+Details:
+	Entity Type: null (net.minecraft.entity.player.EntityPlayerMP)
+	Entity ID: 243
+	Entity Name: Player708
+	Entity's Exact location: -696,25, 4,00, 149,91
+	Entity's Block location: World: (-697,4,149), Chunk: (at 7,0,5 in -44,9; contains blocks -704,0,144 to -689,255,159), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Entity's Momentum: 0,00, -0,08, 0,00
+Stacktrace:
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:330)
+	at net.minecraft.network.NetHandlerPlayServer.processPlayer(NetHandlerPlayServer.java:329)
+	at net.minecraft.network.play.client.C03PacketPlayer.processPacket(C03PacketPlayer.java:37)
+	at net.minecraft.network.play.client.C03PacketPlayer.processPacket(C03PacketPlayer.java:111)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@52965b2c
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 659454408 bytes (628 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.8} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player708'/243, l='New World', x=-696,25, y=4,00, z=149,91]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

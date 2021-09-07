@@ -1,0 +1,132 @@
+---- Minecraft Crash Report ----
+// Don't be sad. I'll do better next time, I promise!
+
+Time: 03.08.19 21:37
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at randommagics.curses.CurseHoleyPockets.onApply(CurseHoleyPockets.java:21)
+	at randommagics.curses.Curse.onUpdate(Curse.java:53)
+	at randommagics.customs.CustomExtendedEntityProperties.doCurses(CustomExtendedEntityProperties.java:214)
+	at randommagics.EventHandler.onLivingUpdate(EventHandler.java:273)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_65_EventHandler_onLivingUpdate_LivingUpdateEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.common.ForgeHooks.onLivingUpdate(ForgeHooks.java:289)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1765)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:327)
+	at net.minecraft.client.entity.EntityClientPlayerMP.onUpdate(EntityClientPlayerMP.java:96)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2097)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.curses.CurseHoleyPockets.onApply(CurseHoleyPockets.java:21)
+	at randommagics.curses.Curse.onUpdate(Curse.java:53)
+	at randommagics.customs.CustomExtendedEntityProperties.doCurses(CustomExtendedEntityProperties.java:214)
+	at randommagics.EventHandler.onLivingUpdate(EventHandler.java:273)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_65_EventHandler_onLivingUpdate_LivingUpdateEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.common.ForgeHooks.onLivingUpdate(ForgeHooks.java:289)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1765)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:327)
+	at net.minecraft.client.entity.EntityClientPlayerMP.onUpdate(EntityClientPlayerMP.java:96)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityClientPlayerMP)
+	Entity ID: 188
+	Entity Name: Player546
+	Entity's Exact location: -678,68, 5,62, 119,26
+	Entity's Block location: World: (-679,5,119), Chunk: (at 9,0,7 in -43,7; contains blocks -688,0,112 to -673,255,127), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Entity's Momentum: 0,00, -0,08, 0,00
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player546'/188, l='MpServer', x=-678,68, y=5,62, z=119,26]]
+	Chunk stats: MultiplayerChunkCache: 625, 625
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-685,4,107), Chunk: (at 3,0,11 in -43,6; contains blocks -688,0,96 to -673,255,111), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Level time: 582577 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 35 total; [EntityCow['Cow'/64, l='MpServer', x=-732,06, y=4,00, z=80,94], EntityChicken['Chicken'/65, l='MpServer', x=-727,63, y=4,00, z=112,47], EntityPig['Pig'/68, l='MpServer', x=-707,53, y=4,00, z=79,16], EntityPig['Pig'/70, l='MpServer', x=-695,69, y=4,00, z=53,78], EntityPig['Pig'/71, l='MpServer', x=-691,13, y=4,00, z=48,09], EntityPig['Pig'/72, l='MpServer', x=-703,06, y=4,00, z=75,03], EntityPig['Pig'/73, l='MpServer', x=-703,59, y=4,00, z=68,16], EntitySheep['Sheep'/138, l='MpServer', x=-601,34, y=4,00, z=70,78], EntityPig['Pig'/139, l='MpServer', x=-600,06, y=4,00, z=76,94], EntityPig['Pig'/77, l='MpServer', x=-670,13, y=4,00, z=55,69], EntityPig['Pig'/78, l='MpServer', x=-685,66, y=4,00, z=61,19], EntitySheep['Sheep'/79, l='MpServer', x=-679,09, y=4,00, z=75,84], EntityChicken['Chicken'/143, l='MpServer', x=-608,41, y=4,00, z=103,56], EntitySheep['Sheep'/84, l='MpServer', x=-656,91, y=4,00, z=43,09], EntitySheep['Sheep'/85, l='MpServer', x=-661,13, y=4,00, z=59,84], EntityChicken['Chicken'/86, l='MpServer', x=-662,47, y=4,00, z=53,53], EntityClientPlayerMP['Player546'/188, l='MpServer', x=-678,68, y=5,62, z=119,26], EntityChicken['Chicken'/95, l='MpServer', x=-642,63, y=4,00, z=47,47], EntitySheep['Sheep'/96, l='MpServer', x=-650,53, y=4,00, z=44,28], EntityPig['Pig'/97, l='MpServer', x=-649,91, y=4,00, z=60,88], EntityCow['Cow'/106, l='MpServer', x=-625,22, y=4,00, z=41,69], EntityPig['Pig'/107, l='MpServer', x=-636,19, y=4,00, z=47,41], EntityPig['Pig'/108, l='MpServer', x=-631,81, y=4,00, z=47,38], EntityChicken['Chicken'/109, l='MpServer', x=-629,59, y=4,00, z=50,56], EntityPig['Pig'/110, l='MpServer', x=-625,16, y=4,00, z=71,06], EntityPig['Pig'/118, l='MpServer', x=-624,81, y=4,00, z=43,06], EntityPig['Pig'/119, l='MpServer', x=-616,09, y=4,00, z=41,94], EntitySheep['Sheep'/120, l='MpServer', x=-620,06, y=4,00, z=87,13], EntityChicken['Chicken'/56, l='MpServer', x=-745,53, y=4,00, z=50,53], EntityChicken['Chicken'/121, l='MpServer', x=-610,41, y=4,00, z=109,44], EntityPig['Pig'/57, l='MpServer', x=-744,84, y=4,00, z=105,25], EntitySheep['Sheep'/122, l='MpServer', x=-623,66, y=4,00, z=116,34], EntityPig['Pig'/123, l='MpServer', x=-608,06, y=4,00, z=122,81], EntityPig['Pig'/124, l='MpServer', x=-614,88, y=4,00, z=118,16], EntityPig['Pig'/63, l='MpServer', x=-725,91, y=4,00, z=76,16]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 863439208 bytes (823 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.4} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 431.60' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 431.60, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

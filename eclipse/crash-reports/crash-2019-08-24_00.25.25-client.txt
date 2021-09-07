@@ -1,0 +1,105 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 24.08.19 0:25
+Description: Unexpected error
+
+java.lang.IllegalStateException: Already tesselating!
+	at net.minecraft.client.renderer.Tessellator.startDrawing(Tessellator.java:257)
+	at net.minecraft.client.renderer.Tessellator.startDrawingQuads(Tessellator.java:247)
+	at net.minecraft.client.renderer.RenderGlobal.renderSky(RenderGlobal.java:1191)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1243)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1087)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.renderer.Tessellator.startDrawing(Tessellator.java:257)
+	at net.minecraft.client.renderer.Tessellator.startDrawingQuads(Tessellator.java:247)
+	at net.minecraft.client.renderer.RenderGlobal.renderSky(RenderGlobal.java:1191)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1243)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player178'/59, l='MpServer', x=-443,15, y=46,69, z=-70,31]]
+	Chunk stats: MultiplayerChunkCache: 506, 506
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-128,64,-240), Chunk: (at 0,4,0 in -8,-15; contains blocks -128,0,-240 to -113,255,-225), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 1946 game time, 1946 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 66 total; [EntityItem['item.tile.blockCustomPlant.3'/6148, l='MpServer', x=-406,03, y=5,13, z=-103,12], EntityItem['item.tile.blockCustomPlant.3'/6150, l='MpServer', x=-407,20, y=4,13, z=-110,04], EntityItem['item.tile.cactus'/6174, l='MpServer', x=-416,01, y=4,13, z=-79,20], EntityItem['item.tile.cactus'/5662, l='MpServer', x=-399,10, y=5,13, z=-125,70], EntityItem['item.tile.cactus'/6175, l='MpServer', x=-412,31, y=2,13, z=-79,40], EntityItem['item.tile.cactus'/5663, l='MpServer', x=-397,23, y=3,13, z=-120,66], EntityItem['item.tile.cactus'/5664, l='MpServer', x=-399,37, y=4,13, z=-119,31], EntityClientPlayerMP['Player178'/59, l='MpServer', x=-443,15, y=46,69, z=-70,31], EntityClientPlayerMP['Player178'/59, l='MpServer', x=610,85, y=68,83, z=560,04], EntityItem['item.tile.cactus'/5188, l='MpServer', x=-381,72, y=3,13, z=-95,28], EntityBat['Bat'/4173, l='MpServer', x=-417,03, y=22,84, z=-79,72], EntityItem['item.tile.cactus'/24147, l='MpServer', x=-430,76, y=5,13, z=-69,08], EntityItem['item.tile.cactus'/5254, l='MpServer', x=-387,34, y=2,13, z=-97,65], EntityItem['item.tile.cactus'/25234, l='MpServer', x=-469,25, y=69,13, z=-29,59], EntityItem['item.tile.cactus'/24214, l='MpServer', x=-427,88, y=2,13, z=-56,46], EntityItem['item.tile.cactus'/4760, l='MpServer', x=-380,31, y=3,13, z=-92,04], EntityItem['item.tile.cactus'/5320, l='MpServer', x=-381,55, y=4,13, z=-69,92], EntityItem['item.tile.cactus'/5321, l='MpServer', x=-381,20, y=2,13, z=-68,75], EntityItem['item.tile.cactus'/5322, l='MpServer', x=-382,64, y=5,13, z=-67,47], EntityItem['item.tile.cactus'/5328, l='MpServer', x=-385,38, y=4,13, z=-65,05], EntityItem['item.tile.cactus'/5329, l='MpServer', x=-388,93, y=5,13, z=-71,18], EntityItem['item.tile.cactus'/5330, l='MpServer', x=-382,92, y=4,13, z=-43,28], EntityItem['item.tile.mushroom'/3284, l='MpServer', x=-455,13, y=5,13, z=-19,88], EntityItem['item.tile.cactus'/24280, l='MpServer', x=-429,48, y=4,13, z=-67,36], EntityItem['item.tile.cactus'/5337, l='MpServer', x=-384,38, y=5,13, z=-95,08], EntityItem['item.tile.cactus'/5338, l='MpServer', x=-386,44, y=5,13, z=-96,63], EntityItem['item.tile.cactus'/5861, l='MpServer', x=-395,76, y=2,13, z=-122,49], EntityItem['item.tile.blockCustomPlant.3'/6389, l='MpServer', x=-413,38, y=3,13, z=-103,49], EntityBat['Bat'/24823, l='MpServer', x=-479,59, y=52,02, z=-88,97], EntityItem['item.tile.cactus'/6391, l='MpServer', x=-410,81, y=4,13, z=-55,96], EntityItem['item.tile.cactus'/6392, l='MpServer', x=-414,69, y=3,13, z=-58,61], EntityItem['item.tile.blockCustomPlant.3'/6395, l='MpServer', x=-414,99, y=4,13, z=-114,84], EntityItem['item.tile.blockCustomPlant.3'/6397, l='MpServer', x=-418,69, y=4,13, z=-104,07], EntityItem['item.tile.cactus'/24838, l='MpServer', x=-443,83, y=10,41, z=-89,57], EntityItem['item.tile.cactus'/24839, l='MpServer', x=-446,88, y=11,13, z=-93,71], EntityItem['item.tile.cactus'/5929, l='MpServer', x=-398,61, y=4,13, z=-22,07], EntityItem['item.tile.cactus'/4905, l='MpServer', x=-382,21, y=2,13, z=-49,38], EntityItem['item.tile.cactus'/4907, l='MpServer', x=-383,92, y=3,13, z=-42,82], EntityItem['item.tile.cactus'/4908, l='MpServer', x=-384,21, y=4,13, z=-43,94], EntityItem['item.tile.cactus'/5948, l='MpServer', x=-403,50, y=4,13, z=-21,03], EntityItem['item.tile.cactus'/25405, l='MpServer', x=-471,31, y=66,13, z=-94,28], EntityItem['item.tile.cactus'/25406, l='MpServer', x=-470,97, y=66,13, z=-95,78], EntityItem['item.tile.cactus'/5950, l='MpServer', x=-403,68, y=4,13, z=-88,86], EntityItem['item.tile.cactus'/24385, l='MpServer', x=-435,50, y=1,13, z=-127,78], EntityItem['item.tile.cactus'/5469, l='MpServer', x=-390,70, y=3,13, z=-51,58], EntityItem['item.tile.cactus'/5470, l='MpServer', x=-385,08, y=4,13, z=-52,25], EntityItem['item.tile.cactus'/5471, l='MpServer', x=-384,47, y=4,13, z=-55,00], EntityItem['item.tile.cactus'/5476, l='MpServer', x=-389,43, y=2,13, z=-54,51], EntityItem['item.tile.cactus'/5477, l='MpServer', x=-390,91, y=4,13, z=-125,06], EntityItem['item.tile.cactus'/6016, l='MpServer', x=-402,95, y=5,13, z=-103,01], EntityItem['item.tile.cactus'/6017, l='MpServer', x=-407,78, y=3,13, z=-102,89], EntityItem['item.tile.cactus'/24453, l='MpServer', x=-441,17, y=5,13, z=-60,16], EntityItem['item.tile.cactus'/23944, l='MpServer', x=-425,80, y=4,13, z=-61,51], EntityItem['item.tile.cactus'/23946, l='MpServer', x=-429,87, y=3,13, z=-63,64], EntityItem['item.tile.cactus'/24974, l='MpServer', x=-445,21, y=12,31, z=-45,58], EntityZombie['Zombie'/1429, l='MpServer', x=-23,28, y=-142,67, z=-7,14], EntitySkeleton['Skeleton'/1430, l='MpServer', x=-23,63, y=-272,98, z=-17,28], EntityItem['item.tile.cactus'/5566, l='MpServer', x=-392,54, y=5,13, z=-79,09], EntityItem['item.tile.cactus'/5580, l='MpServer', x=-397,73, y=4,13, z=-23,34], EntityItem['item.tile.cactus'/5581, l='MpServer', x=-398,23, y=2,13, z=-20,54], EntityItem['item.tile.cactus'/5582, l='MpServer', x=-393,84, y=4,13, z=-23,27], EntityItem['item.tile.cactus'/5583, l='MpServer', x=-391,27, y=4,13, z=-13,77], EntityItem['item.tile.cactus'/24534, l='MpServer', x=-439,81, y=5,13, z=-27,90], EntityItem['item.tile.cactus'/24535, l='MpServer', x=-441,59, y=2,13, z=-31,41], EntityItem['item.tile.cactus'/24536, l='MpServer', x=-445,39, y=5,13, z=-27,68], EntityBat['Bat'/37885, l='MpServer', x=-513,25, y=31,00, z=-107,25]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 11881040 bytes (11 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.4} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 431.60' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 431.60, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

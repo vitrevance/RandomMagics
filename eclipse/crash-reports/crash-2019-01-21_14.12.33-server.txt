@@ -1,0 +1,84 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 21.01.19 14:12
+Description: Ticking block entity
+
+java.lang.NullPointerException: Ticking block entity
+	at net.minecraft.item.ItemStack.addEnchantment(ItemStack.java:790)
+	at randommagics.blocks.TileRitualStonePower.updateEntity(TileRitualStonePower.java:140)
+	at net.minecraft.world.World.updateEntities(World.java:2160)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.item.ItemStack.addEnchantment(ItemStack.java:790)
+	at randommagics.blocks.TileRitualStonePower.updateEntity(TileRitualStonePower.java:140)
+
+-- Block entity being ticked --
+Details:
+	Name: TileRitualStonePower // randommagics.blocks.TileRitualStonePower
+	Block type: ID #218 (tile.ritualStonePower // randommagics.blocks.BlockRitualStonePower)
+	Block data value: 0 / 0x0 / 0b0000
+	Block location: World: (488,4,-673), Chunk: (at 8,0,15 in 30,-43; contains blocks 480,0,-688 to 495,255,-673), Region: (0,-2; contains chunks 0,-64 to 31,-33, blocks 0,0,-1024 to 511,255,-513)
+	Actual block type: ID #218 (tile.ritualStonePower // randommagics.blocks.BlockRitualStonePower)
+	Actual block data value: 0 / 0x0 / 0b0000
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2160)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: test
+	All players: 1 total; [EntityPlayerMP['Player105'/386, l='test', x=487,75, y=5,00, z=-673,82]]
+	Chunk stats: ServerChunkCache: 728 Drop: 0
+	Level seed: -7503650778609268697
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (493,4,-679), Chunk: (at 13,0,9 in 30,-43; contains blocks 480,0,-688 to 495,255,-673), Region: (0,-2; contains chunks 0,-64 to 31,-33, blocks 0,0,-1024 to 511,255,-513)
+	Level time: 260621 game time, 1207 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 160385 (now: false), thunder time: 173943 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 749689280 bytes (714 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.2.8} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player105'/386, l='test', x=487,75, y=5,00, z=-673,82]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

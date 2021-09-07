@@ -1,0 +1,35 @@
+{
+    "spell.wind": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "randommagics:spell.wind"
+            }
+        ]
+    },
+    "ambient.heartbeat": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "randommagics:ambient.heartbeat"
+            }
+        ]
+    },
+    "ambient.madspeach": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "randommagics:ambient.madspeach"
+            }
+        ]
+    },
+    "minigame.normal": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "randommagics:minigame.normal",
+                "stream": true
+            }
+        ]
+    }
+}

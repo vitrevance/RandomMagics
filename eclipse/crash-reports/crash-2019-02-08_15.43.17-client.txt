@@ -1,0 +1,114 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 08.02.19 15:43
+Description: Updating screen events
+
+java.lang.ClassCastException: net.minecraft.inventory.Slot cannot be cast to net.minecraft.item.ItemStack
+	at randommagics.containers.ContainerStupidAnvil.transferStackInSlot(ContainerStupidAnvil.java:195)
+	at net.minecraft.inventory.Container.slotClick(Container.java:279)
+	at randommagics.containers.ContainerStupidAnvil.slotClick(ContainerStupidAnvil.java:185)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:478)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:676)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:418)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:344)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1731)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.containers.ContainerStupidAnvil.transferStackInSlot(ContainerStupidAnvil.java:195)
+	at net.minecraft.inventory.Container.slotClick(Container.java:279)
+	at randommagics.containers.ContainerStupidAnvil.slotClick(ContainerStupidAnvil.java:185)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:478)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:676)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:418)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:344)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+
+-- Affected screen --
+Details:
+	Screen name: randommagics.gui.GuiStupidAnvil
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player911'/157, l='MpServer', x=541,07, y=6,62, z=-710,23]]
+	Chunk stats: MultiplayerChunkCache: 625, 625
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (534,4,-695), Chunk: (at 6,0,9 in 33,-44; contains blocks 528,0,-704 to 543,255,-689), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
+	Level time: 854191 game time, 1207 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 61 total; [EntitySlime['Slime'/128, l='MpServer', x=544,31, y=2,00, z=-696,31], EntitySlime['Slime'/129, l='MpServer', x=551,85, y=4,00, z=-655,39], EntitySlime['Slime'/130, l='MpServer', x=539,08, y=4,39, z=-667,96], EntitySlime['Slime'/134, l='MpServer', x=555,75, y=4,00, z=-788,94], EntitySlime['Slime'/135, l='MpServer', x=580,32, y=4,00, z=-781,23], EntitySlime['Slime'/136, l='MpServer', x=584,69, y=4,00, z=-782,00], EntitySlime['Slime'/137, l='MpServer', x=593,93, y=4,39, z=-775,07], EntitySlime['Slime'/138, l='MpServer', x=595,09, y=4,00, z=-759,47], EntitySlime['Slime'/139, l='MpServer', x=577,54, y=4,69, z=-730,94], EntityCow['Cow'/140, l='MpServer', x=584,63, y=4,00, z=-672,03], EntitySlime['Slime'/141, l='MpServer', x=579,77, y=4,00, z=-683,31], EntitySlime['Slime'/142, l='MpServer', x=591,22, y=4,00, z=-671,09], EntitySlime['Slime'/145, l='MpServer', x=593,28, y=4,00, z=-764,04], EntityPig['Pig'/146, l='MpServer', x=596,84, y=4,00, z=-701,97], EntitySlime['Slime'/147, l='MpServer', x=614,06, y=3,00, z=-684,28], EntityClientPlayerMP['Player911'/157, l='MpServer', x=541,07, y=6,62, z=-710,23], EntityPig['Pig'/63, l='MpServer', x=469,46, y=3,37, z=-740,53], EntityCow['Cow'/73, l='MpServer', x=470,16, y=4,00, z=-760,53], EntityChicken['Chicken'/74, l='MpServer', x=468,19, y=3,00, z=-743,13], EntitySlime['Slime'/75, l='MpServer', x=468,53, y=1,00, z=-640,06], EntitySlime['Slime'/80, l='MpServer', x=492,38, y=2,00, z=-698,63], EntitySlime['Slime'/81, l='MpServer', x=494,31, y=1,05, z=-699,31], EntitySlime['Slime'/82, l='MpServer', x=494,31, y=1,00, z=-700,24], EntitySlime['Slime'/84, l='MpServer', x=509,52, y=4,33, z=-781,20], EntitySlime['Slime'/85, l='MpServer', x=498,25, y=4,00, z=-719,13], EntitySlime['Slime'/15061, l='MpServer', x=535,68, y=5,06, z=-790,69], EntitySlime['Slime'/86, l='MpServer', x=501,31, y=1,00, z=-713,69], EntitySlime['Slime'/88, l='MpServer', x=507,22, y=1,83, z=-679,78], EntitySlime['Slime'/89, l='MpServer', x=505,78, y=1,00, z=-685,22], EntityItem['item.item.slimeball'/90, l='MpServer', x=511,16, y=1,13, z=-681,69], EntitySlime['Slime'/91, l='MpServer', x=492,31, y=1,00, z=-675,13], EntitySlime['Slime'/92, l='MpServer', x=501,31, y=1,00, z=-633,31], EntitySlime['Slime'/96, l='MpServer', x=514,00, y=4,00, z=-786,41], EntitySlime['Slime'/97, l='MpServer', x=520,60, y=1,00, z=-770,38], EntitySlime['Slime'/98, l='MpServer', x=521,40, y=1,72, z=-770,38], EntitySlime['Slime'/99, l='MpServer', x=520,63, y=1,83, z=-768,89], EntitySlime['Slime'/100, l='MpServer', x=520,31, y=2,06, z=-765,31], EntitySlime['Slime'/101, l='MpServer', x=520,31, y=2,00, z=-767,56], EntitySlime['Slime'/102, l='MpServer', x=520,38, y=1,99, z=-694,63], EntitySlime['Slime'/103, l='MpServer', x=527,31, y=1,00, z=-689,69], EntitySlime['Slime'/104, l='MpServer', x=519,89, y=1,56, z=-684,79], EntitySlime['Slime'/105, l='MpServer', x=517,22, y=2,06, z=-683,76], EntitySlime['Slime'/106, l='MpServer', x=524,31, y=2,00, z=-676,31], EntitySlime['Slime'/107, l='MpServer', x=514,41, y=1,00, z=-682,78], EntitySlime['Slime'/108, l='MpServer', x=527,38, y=1,00, z=-685,38], EntitySlime['Slime'/109, l='MpServer', x=512,34, y=1,00, z=-682,38], EntitySlime['Slime'/111, l='MpServer', x=526,88, y=4,00, z=-777,88], EntityChicken['Chicken'/112, l='MpServer', x=529,75, y=4,00, z=-764,09], EntitySlime['Slime'/113, l='MpServer', x=539,72, y=4,00, z=-745,41], EntitySlime['Slime'/114, l='MpServer', x=527,57, y=4,85, z=-756,82], EntitySlime['Slime'/115, l='MpServer', x=542,69, y=2,00, z=-734,69], EntitySlime['Slime'/116, l='MpServer', x=542,33, y=2,47, z=-714,31], EntitySlime['Slime'/117, l='MpServer', x=542,31, y=2,18, z=-714,31], EntitySlime['Slime'/118, l='MpServer', x=532,72, y=5,00, z=-688,69], EntitySlime['Slime'/119, l='MpServer', x=541,63, y=4,00, z=-698,85], EntitySlime['Slime'/120, l='MpServer', x=536,16, y=4,00, z=-692,75], EntitySlime['Slime'/121, l='MpServer', x=533,31, y=1,00, z=-677,31], EntitySlime['Slime'/122, l='MpServer', x=541,12, y=4,47, z=-694,07], EntitySlime['Slime'/125, l='MpServer', x=554,51, y=4,47, z=-752,32], EntitySlime['Slime'/126, l='MpServer', x=548,79, y=4,00, z=-713,56], EntitySlime['Slime'/127, l='MpServer', x=546,45, y=4,85, z=-711,27]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 629701632 bytes (600 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.0} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 23.20.16.4973' Renderer: 'Intel(R) HD Graphics 630'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 630 GL version 4.5.0 - Build 23.20.16.4973, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

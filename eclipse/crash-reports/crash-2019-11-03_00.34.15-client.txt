@@ -1,0 +1,115 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 03.11.19 0:34
+Description: Unexpected error
+
+java.lang.IllegalArgumentException: Attempted to cancel a uncancelable event
+	at cpw.mods.fml.common.eventhandler.Event.setCanceled(Event.java:74)
+	at randommagics.EventHandler.onWorldRender(EventHandler.java:321)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_71_EventHandler_onWorldRender_RenderWorldLastEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.dispatchRenderLast(ForgeHooksClient.java:261)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1430)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1087)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at cpw.mods.fml.common.eventhandler.Event.setCanceled(Event.java:74)
+	at randommagics.EventHandler.onWorldRender(EventHandler.java:321)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_71_EventHandler_onWorldRender_RenderWorldLastEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.dispatchRenderLast(ForgeHooksClient.java:261)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1430)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player661'/341, l='MpServer', x=-672,95, y=6,62, z=146,38]]
+	Chunk stats: MultiplayerChunkCache: 770, 770
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-169,64,255), Chunk: (at 7,4,15 in -11,15; contains blocks -176,0,240 to -161,255,255), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 123885 game time, 199222 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 27 total; [EntityBat['Bat'/393, l='MpServer', x=-624,82, y=6,19, z=225,60], EntitySpider['Spider'/342, l='MpServer', x=-673,16, y=3,00, z=156,22], EntityItem['item.item.string'/343, l='MpServer', x=-673,50, y=1,13, z=157,16], EntityClientPlayerMP['Player661'/341, l='MpServer', x=-672,95, y=6,62, z=146,38], EntityItem['item.item.seeds'/345, l='MpServer', x=-668,13, y=3,13, z=150,13], EntityItem['item.item.rottenFlesh'/346, l='MpServer', x=-685,03, y=5,13, z=160,44], EntityItem['item.item.skull.zombie'/347, l='MpServer', x=-682,63, y=5,13, z=160,91], EntityXPOrb['Experience Orb'/348, l='MpServer', x=-684,69, y=5,25, z=162,72], EntityXPOrb['Experience Orb'/349, l='MpServer', x=-686,25, y=5,25, z=164,75], EntityXPOrb['Experience Orb'/350, l='MpServer', x=-686,25, y=5,25, z=164,75], EntityChicken['Chicken'/351, l='MpServer', x=-635,56, y=5,00, z=167,41], EntityChicken['Chicken'/352, l='MpServer', x=-637,47, y=7,00, z=185,09], EntityBat['Bat'/353, l='MpServer', x=-712,99, y=28,69, z=147,71], EntityChicken['Chicken'/354, l='MpServer', x=-601,51, y=4,34, z=158,44], EntityChicken['Chicken'/355, l='MpServer', x=-619,56, y=5,00, z=165,56], EntityBat['Bat'/356, l='MpServer', x=-654,32, y=4,17, z=204,56], EntityBat['Bat'/357, l='MpServer', x=-713,47, y=5,10, z=183,03], EntityZombie['Zombie'/358, l='MpServer', x=-708,53, y=5,00, z=182,72], EntityCreeper['Creeper'/359, l='MpServer', x=-705,72, y=5,00, z=180,13], EntityBat['Bat'/360, l='MpServer', x=-710,53, y=26,49, z=176,05], EntityChicken['Chicken'/361, l='MpServer', x=-621,85, y=4,74, z=180,47], EntityItem['item.item.feather'/362, l='MpServer', x=-621,34, y=4,13, z=181,63], EntitySlime['Slime'/363, l='MpServer', x=-623,80, y=4,00, z=176,34], EntityCreeper['Creeper'/364, l='MpServer', x=-665,97, y=4,21, z=220,30], EntityZombie['Zombie'/365, l='MpServer', x=-664,16, y=5,00, z=218,88], EntityChicken['Chicken'/366, l='MpServer', x=-602,47, y=5,00, z=170,47], EntityChicken['Chicken'/368, l='MpServer', x=-605,18, y=5,35, z=200,85]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 382634064 bytes (364 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 13 mods loaded, 13 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.8} [RandomMagics] (bin) 
+	UCHIJAAAA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJAAAA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJAAAA	EnderIO{1.7.10-2.3.0.429_beta} [Ender IO] (EnderIO-1.7.10-2.3.0.429_beta.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 441.08' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+	EnderIO: No known problems detected.
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 441.08, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

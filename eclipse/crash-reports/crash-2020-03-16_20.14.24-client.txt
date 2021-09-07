@@ -1,0 +1,127 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 16.03.20 20:14
+Description: Ticking entity
+
+java.lang.ClassCastException: net.minecraft.entity.item.EntityXPOrb cannot be cast to net.minecraft.entity.EntityLivingBase
+	at randommagics.items.ItemDeathSentence.onUsingTick(ItemDeathSentence.java:49)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:273)
+	at net.minecraft.client.entity.EntityClientPlayerMP.onUpdate(EntityClientPlayerMP.java:96)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2097)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.items.ItemDeathSentence.onUsingTick(ItemDeathSentence.java:49)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:273)
+	at net.minecraft.client.entity.EntityClientPlayerMP.onUpdate(EntityClientPlayerMP.java:96)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityClientPlayerMP)
+	Entity ID: 130
+	Entity Name: Player261
+	Entity's Exact location: -628,65, 10,62, 163,66
+	Entity's Block location: World: (-629,10,163), Chunk: (at 11,0,3 in -40,10; contains blocks -640,0,160 to -625,255,175), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Entity's Momentum: -0,05, 0,00, -0,62
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player261'/130, l='MpServer', x=-628,65, y=10,62, z=163,66]]
+	Chunk stats: MultiplayerChunkCache: 945, 945
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-685,4,107), Chunk: (at 3,0,11 in -43,6; contains blocks -688,0,96 to -673,255,111), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Level time: 2006756 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 62 total; [EntitySlime['Slime'/4224, l='MpServer', x=-635,94, y=4,96, z=149,32], EntityClientPlayerMP['Player261'/130, l='MpServer', x=-628,65, y=10,62, z=163,66], EntitySlime['Slime'/58637, l='MpServer', x=-634,50, y=4,57, z=229,62], EntityXPOrb['Experience Orb'/14, l='MpServer', x=-772,25, y=4,25, z=118,44], EntityXPOrb['Experience Orb'/34, l='MpServer', x=-742,81, y=4,25, z=85,25], EntityXPOrb['Experience Orb'/35, l='MpServer', x=-739,81, y=4,25, z=122,69], EntityXPOrb['Experience Orb'/36, l='MpServer', x=-739,78, y=4,25, z=117,63], EntitySlime['Slime'/34982, l='MpServer', x=-605,30, y=4,00, z=169,32], EntityXPOrb['Experience Orb'/49, l='MpServer', x=-722,72, y=4,25, z=76,97], EntityXPOrb['Experience Orb'/51, l='MpServer', x=-721,75, y=4,25, z=81,09], EntityXPOrb['Experience Orb'/56, l='MpServer', x=-710,22, y=4,25, z=76,75], EntityXPOrb['Experience Orb'/57, l='MpServer', x=-708,66, y=4,25, z=74,75], EntityXPOrb['Experience Orb'/58, l='MpServer', x=-711,75, y=4,25, z=79,63], EntityXPOrb['Experience Orb'/59, l='MpServer', x=-710,28, y=4,25, z=70,66], EntityXPOrb['Experience Orb'/60, l='MpServer', x=-708,75, y=4,25, z=76,19], EntityXPOrb['Experience Orb'/63, l='MpServer', x=-712,88, y=4,25, z=84,81], EntityXPOrb['Experience Orb'/64, l='MpServer', x=-717,97, y=4,25, z=83,75], EntityXPOrb['Experience Orb'/65, l='MpServer', x=-711,94, y=4,25, z=82,84], EntitySlime['Slime'/66, l='MpServer', x=-705,73, y=4,00, z=101,61], EntityXPOrb['Experience Orb'/69, l='MpServer', x=-707,75, y=4,25, z=153,19], EntitySlime['Slime'/71, l='MpServer', x=-706,02, y=4,99, z=182,69], EntityXPOrb['Experience Orb'/72, l='MpServer', x=-713,06, y=4,25, z=193,28], EntityXPOrb['Experience Orb'/76, l='MpServer', x=-698,94, y=4,25, z=182,72], EntityXPOrb['Experience Orb'/77, l='MpServer', x=-681,03, y=4,25, z=81,25], EntitySlime['Slime'/36685, l='MpServer', x=-593,69, y=4,00, z=162,55], EntityXPOrb['Experience Orb'/78, l='MpServer', x=-685,22, y=4,25, z=81,75], EntityXPOrb['Experience Orb'/80, l='MpServer', x=-673,38, y=4,25, z=121,25], EntityItem['item.item.slimeball'/81, l='MpServer', x=-677,09, y=4,13, z=118,94], EntityItem['item.item.slimeball'/82, l='MpServer', x=-677,91, y=4,13, z=118,25], EntityXPOrb['Experience Orb'/83, l='MpServer', x=-674,97, y=4,25, z=168,91], EntityXPOrb['Experience Orb'/84, l='MpServer', x=-676,88, y=4,25, z=170,88], EntityXPOrb['Experience Orb'/87, l='MpServer', x=-662,59, y=4,25, z=78,47], EntityXPOrb['Experience Orb'/89, l='MpServer', x=-660,22, y=4,25, z=83,59], EntityItem['item.item.slimeball'/90, l='MpServer', x=-671,53, y=4,13, z=115,38], EntityItem['item.item.slimeball'/92, l='MpServer', x=-670,28, y=4,13, z=126,53], EntityXPOrb['Experience Orb'/94, l='MpServer', x=-665,91, y=4,25, z=141,25], EntityXPOrb['Experience Orb'/95, l='MpServer', x=-645,03, y=4,25, z=70,53], EntityXPOrb['Experience Orb'/96, l='MpServer', x=-646,19, y=4,25, z=72,59], EntitySlime['Slime'/97, l='MpServer', x=-652,53, y=4,00, z=87,34], EntityItem['item.item.slimeball'/98, l='MpServer', x=-642,16, y=4,13, z=112,59], EntityXPOrb['Experience Orb'/99, l='MpServer', x=-641,28, y=4,25, z=139,59], EntityItem['item.item.slimeball'/100, l='MpServer', x=-650,34, y=4,13, z=165,47], EntityXPOrb['Experience Orb'/101, l='MpServer', x=-653,97, y=4,25, z=179,78], EntityXPOrb['Experience Orb'/102, l='MpServer', x=-650,81, y=4,25, z=180,47], EntitySlime['Slime'/104, l='MpServer', x=-624,17, y=4,81, z=105,65], EntitySlime['Slime'/28264, l='MpServer', x=-644,38, y=4,14, z=112,51], EntityItem['item.item.slimeball'/105, l='MpServer', x=-626,09, y=4,13, z=143,03], EntityXPOrb['Experience Orb'/106, l='MpServer', x=-632,03, y=4,25, z=153,69], EntityXPOrb['Experience Orb'/107, l='MpServer', x=-636,16, y=4,25, z=151,97], EntityItem['item.item.slimeball'/108, l='MpServer', x=-631,25, y=4,13, z=150,34], EntitySlime['Slime'/109, l='MpServer', x=-634,70, y=4,00, z=149,44], EntitySlime['Slime'/110, l='MpServer', x=-624,38, y=4,00, z=140,65], EntitySlime['Slime'/111, l='MpServer', x=-621,24, y=4,00, z=214,88], EntityXPOrb['Experience Orb'/114, l='MpServer', x=-608,25, y=4,25, z=91,63], EntityXPOrb['Experience Orb'/115, l='MpServer', x=-608,69, y=4,25, z=91,69], EntityItem['item.item.slimeball'/116, l='MpServer', x=-617,41, y=4,13, z=102,19], EntityItem['item.item.slimeball'/117, l='MpServer', x=-622,94, y=4,13, z=167,53], EntityItem['item.item.slimeball'/119, l='MpServer', x=-599,91, y=4,13, z=146,22], EntityItem['item.item.slimeball'/120, l='MpServer', x=-599,38, y=4,13, z=153,88], EntitySlime['Slime'/124, l='MpServer', x=-572,23, y=4,96, z=129,84], EntityItem['item.item.slimeball'/126, l='MpServer', x=-574,44, y=4,13, z=127,06], EntityItem['item.item.slimeball'/127, l='MpServer', x=-572,75, y=4,13, z=133,03]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 758317776 bytes (723 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 16 mods loaded, 16 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.8} [RandomMagics] (bin) 
+	UCHIJAAAA	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UCHIJAAAA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJAAAA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	thaumicenergistics{1.1.3.0} [Thaumic Energistics] (thaumicenergistics-1.1.3.0.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 441.41' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BuildCraftCore:OFF, BuildCraftTransport:OFF, BuildCraftBuilder:OFF, RF:OFF, RFItem:OFF, MFR:OFF, DSU:OFF, FZ:OFF, FMP:OFF, RB:OFF, CLApi:OFF, Waila:OFF, InvTweaks:OFF, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF, OpenComputers:OFF, PneumaticCraft:OFF
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 441.41, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

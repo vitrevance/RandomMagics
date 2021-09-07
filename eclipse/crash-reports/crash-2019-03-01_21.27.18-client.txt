@@ -1,0 +1,114 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 01.03.19 21:27
+Description: Rendering screen
+
+java.lang.NullPointerException: Rendering screen
+	at randommagics.blocks.ItemDevice.addInformation(ItemDevice.java:32)
+	at net.minecraft.item.ItemStack.getTooltip(ItemStack.java:641)
+	at net.minecraft.client.gui.GuiScreen.renderToolTip(GuiScreen.java:124)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.renderToolTip(GuiContainerCreative.java:769)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:186)
+	at net.minecraft.client.renderer.InventoryEffectRenderer.drawScreen(InventoryEffectRenderer.java:44)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawScreen(GuiContainerCreative.java:673)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1137)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.blocks.ItemDevice.addInformation(ItemDevice.java:32)
+	at net.minecraft.item.ItemStack.getTooltip(ItemStack.java:641)
+	at net.minecraft.client.gui.GuiScreen.renderToolTip(GuiScreen.java:124)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.renderToolTip(GuiContainerCreative.java:769)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:186)
+	at net.minecraft.client.renderer.InventoryEffectRenderer.drawScreen(InventoryEffectRenderer.java:44)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawScreen(GuiContainerCreative.java:673)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.client.gui.inventory.GuiContainerCreative
+	Mouse location: Scaled: (327, 78). Absolute: (654, 323)
+	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player371'/54, l='MpServer', x=535,94, y=5,62, z=-707,72]]
+	Chunk stats: MultiplayerChunkCache: 625, 625
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (534,4,-695), Chunk: (at 6,0,9 in 33,-44; contains blocks 528,0,-704 to 543,255,-689), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
+	Level time: 962426 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 19 total; [EntityChicken['Chicken'/34, l='MpServer', x=520,41, y=4,00, z=-778,59], EntityItem['item.item.slimeball'/35, l='MpServer', x=523,88, y=1,13, z=-674,94], EntitySlime['Slime'/55043, l='MpServer', x=596,60, y=4,00, z=-784,40], EntitySlime['Slime'/36, l='MpServer', x=537,84, y=5,06, z=-780,68], EntityChicken['Chicken'/37, l='MpServer', x=546,09, y=3,00, z=-739,63], EntityItem['item.item.egg'/38, l='MpServer', x=544,13, y=3,13, z=-739,28], EntitySlime['Slime'/55046, l='MpServer', x=607,40, y=4,00, z=-780,60], EntityCow['Cow'/39, l='MpServer', x=546,53, y=2,00, z=-695,47], EntitySlime['Slime'/44, l='MpServer', x=596,20, y=4,32, z=-773,90], EntitySlime['Slime'/45, l='MpServer', x=592,22, y=4,00, z=-769,56], EntitySlime['Slime'/46, l='MpServer', x=589,29, y=4,95, z=-770,89], EntitySlime['Slime'/47, l='MpServer', x=614,52, y=4,00, z=-749,74], EntityPig['Pig'/48, l='MpServer', x=604,41, y=3,00, z=-700,06], EntitySheep['Sheep'/49, l='MpServer', x=603,72, y=4,00, z=-662,81], EntitySlime['Slime'/10835, l='MpServer', x=520,35, y=1,00, z=-636,47], EntitySlime['Slime'/27, l='MpServer', x=473,14, y=4,95, z=-783,11], EntityClientPlayerMP['Player371'/54, l='MpServer', x=535,94, y=5,62, z=-707,72], EntitySlime['Slime'/28, l='MpServer', x=475,31, y=3,00, z=-757,91], EntitySlime['Slime'/27070, l='MpServer', x=609,55, y=3,00, z=-702,34]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 728917128 bytes (695 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.2} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 25.20.100.6323' Renderer: 'Intel(R) HD Graphics 630'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 630 GL version 4.5.0 - Build 25.20.100.6323, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

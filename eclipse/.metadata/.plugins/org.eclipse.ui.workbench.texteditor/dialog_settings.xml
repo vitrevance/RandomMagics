@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="clock"/>
+		<item key="casesensitive" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="wrap" value="true"/>
+		<item key="wholeword" value="false"/>
+		<list key="findhistory">
+			<item value="clock"/>
+			<item value="clocl"/>
+			<item value="ex.demonLevel == 4"/>
+			<item value="ex.demonLevel == "/>
+			<item value="DemonBossFight.getCurrentFight().onUpdate"/>
+			<item value="demonheart"/>
+			<item value="sound"/>
+			<item value="syst"/>
+			<item value="ItemInfniteRunicShieldingRing"/>
+			<item value="ring"/>
+			<item value="fx"/>
+			<item value="drawfx"/>
+			<item value="soul"/>
+			<item value="EntityItem"/>
+			<item value="dis"/>
+		</list>
+		<list key="replacehistory">
+			<item value="actionPerformed"/>
+			<item value="initGui"/>
+			<item value="mouseReleased"/>
+			<item value="doesGuiPauseGame"/>
+			<item value="keyTyped"/>
+			<item value="updateScreen"/>
+			<item value="translateToLocal"/>
+			<item value="buttonList"/>
+			<item value="dimensionId"/>
+			<item value="provider"/>
+			<item value="theWorld"/>
+			<item value="drawRect"/>
+			<item value="drawString"/>
+			<item value="getStringWidth"/>
+			<item value="drawScreen"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_HEIGHT" value="383"/>
+		<item key="DIALOG_X_ORIGIN" value="931"/>
+		<item key="DIALOG_Y_ORIGIN" value="432"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="729"/>
+		<item key="DIALOG_Y_ORIGIN" value="403"/>
+	</section>
+</section>

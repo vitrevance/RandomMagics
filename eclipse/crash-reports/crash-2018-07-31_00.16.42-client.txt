@@ -1,0 +1,108 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 31.07.18 0:16
+Description: Unexpected error
+
+java.lang.ArrayIndexOutOfBoundsException: -3
+	at randommagics.items.FocusInfinity.getHightDiffForFireUp(FocusInfinity.java:299)
+	at randommagics.items.FocusInfinity.fireUp(FocusInfinity.java:381)
+	at randommagics.items.FocusInfinity.onFocusRightClick(FocusInfinity.java:186)
+	at thaumcraft.common.items.wands.ItemWandCasting.onItemRightClick(ItemWandCasting.java:557)
+	at net.minecraft.item.ItemStack.useItemRightClick(ItemStack.java:164)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.sendUseItem(PlayerControllerMP.java:430)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1557)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2044)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.items.FocusInfinity.getHightDiffForFireUp(FocusInfinity.java:299)
+	at randommagics.items.FocusInfinity.fireUp(FocusInfinity.java:381)
+	at randommagics.items.FocusInfinity.onFocusRightClick(FocusInfinity.java:186)
+	at thaumcraft.common.items.wands.ItemWandCasting.onItemRightClick(ItemWandCasting.java:557)
+	at net.minecraft.item.ItemStack.useItemRightClick(ItemStack.java:164)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.sendUseItem(PlayerControllerMP.java:430)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1557)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player472'/156, l='MpServer', x=161,88, y=5,62, z=32,88]]
+	Chunk stats: MultiplayerChunkCache: 300, 300
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-174,4,188), Chunk: (at 2,0,12 in -11,11; contains blocks -176,0,176 to -161,255,191), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 1205105 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 132 total; [EntitySlime['Slime'/102, l='MpServer', x=158,48, y=4,85, z=64,90], EntityItem['item.item.seeds'/103, l='MpServer', x=168,47, y=5,13, z=87,47], EntityItem['item.item.wheat'/104, l='MpServer', x=170,03, y=5,13, z=90,19], EntityItem['item.item.seeds'/105, l='MpServer', x=169,44, y=5,13, z=89,91], EntityItem['item.item.wheat'/106, l='MpServer', x=172,06, y=5,13, z=90,44], EntityItem['item.item.seeds'/107, l='MpServer', x=171,16, y=5,13, z=90,53], EntityItem['item.item.potato'/108, l='MpServer', x=171,41, y=5,13, z=84,06], EntityItem['item.item.slimeball'/109, l='MpServer', x=172,28, y=4,13, z=86,44], EntityItem['item.item.wheat'/110, l='MpServer', x=174,13, y=5,13, z=87,59], EntityItem['item.item.seeds'/111, l='MpServer', x=172,56, y=5,13, z=87,03], EntityItem['item.item.wheat'/112, l='MpServer', x=173,06, y=5,13, z=90,44], EntityItem['item.item.seeds'/113, l='MpServer', x=172,03, y=5,13, z=90,03], EntityItem['item.item.seeds'/114, l='MpServer', x=173,38, y=5,13, z=89,44], EntityItem['item.item.wheat'/115, l='MpServer', x=171,19, y=5,13, z=94,44], EntityItem['item.item.seeds'/116, l='MpServer', x=171,81, y=5,13, z=93,78], EntityItem['item.item.seeds'/117, l='MpServer', x=170,66, y=5,13, z=95,16], EntityItem['item.item.wheat'/118, l='MpServer', x=169,31, y=4,13, z=92,78], EntityItem['item.item.seeds'/119, l='MpServer', x=170,34, y=5,13, z=94,13], EntityItem['item.item.seeds'/120, l='MpServer', x=171,19, y=4,13, z=92,47], EntityItem['item.item.seeds'/121, l='MpServer', x=166,81, y=5,13, z=94,59], EntityItem['item.item.wheat'/122, l='MpServer', x=168,06, y=5,13, z=94,63], EntityItem['item.item.seeds'/123, l='MpServer', x=168,44, y=5,13, z=93,72], EntityItem['item.item.seeds'/124, l='MpServer', x=169,38, y=5,13, z=93,94], EntityItem['item.item.slimeball'/125, l='MpServer', x=172,84, y=4,13, z=92,13], EntitySlime['Slime'/126, l='MpServer', x=175,06, y=4,00, z=81,69], EntityItem['item.item.slimeball'/127, l='MpServer', x=172,31, y=4,13, z=96,47], EntitySlime['Slime'/128, l='MpServer', x=162,00, y=4,00, z=71,00], EntitySlime['Slime'/129, l='MpServer', x=162,13, y=4,00, z=68,97], EntityVillager['Villager'/130, l='MpServer', x=142,41, y=4,00, z=93,50], EntityVillager['Villager'/131, l='MpServer', x=143,72, y=4,00, z=95,28], EntityItem['item.item.seeds'/132, l='MpServer', x=132,19, y=5,13, z=80,53], EntityItem['item.item.wheat'/133, l='MpServer', x=133,94, y=5,13, z=80,44], EntityItem['item.item.seeds'/134, l='MpServer', x=134,69, y=5,13, z=80,94], EntityVillager['Villager'/135, l='MpServer', x=137,69, y=4,00, z=79,34], EntityItem['item.item.wheat'/136, l='MpServer', x=128,63, y=5,13, z=81,38], EntityItem['item.item.seeds'/137, l='MpServer', x=128,63, y=5,13, z=81,25], EntityVillager['Villager'/138, l='MpServer', x=143,75, y=4,00, z=93,50], EntityItem['item.item.wheat'/139, l='MpServer', x=142,94, y=5,13, z=76,81], EntityItem['item.item.seeds'/140, l='MpServer', x=142,63, y=5,13, z=77,84], EntityItem['item.item.wheat'/141, l='MpServer', x=140,63, y=5,13, z=77,91], EntityItem['item.item.wheat'/142, l='MpServer', x=139,03, y=5,13, z=76,47], EntityItem['item.item.seeds'/143, l='MpServer', x=138,72, y=5,13, z=76,13], EntityItem['item.item.slimeball'/144, l='MpServer', x=141,59, y=4,13, z=74,63], EntityVillager['Villager'/145, l='MpServer', x=143,86, y=5,00, z=73,23], EntityItem['item.item.carrots'/146, l='MpServer', x=132,38, y=5,13, z=71,88], EntityItem['item.item.carrots'/147, l='MpServer', x=128,69, y=5,13, z=78,38], EntityItem['item.item.carrots'/148, l='MpServer', x=128,09, y=5,13, z=77,19], EntityItem['item.item.carrots'/149, l='MpServer', x=130,78, y=5,13, z=76,81], EntityItem['item.item.potato'/150, l='MpServer', x=132,59, y=5,13, z=76,19], EntityItem['item.item.potato'/151, l='MpServer', x=133,09, y=5,13, z=74,72], EntityItem['item.item.potato'/152, l='MpServer', x=131,88, y=5,13, z=74,59], EntityItem['item.item.wheat'/153, l='MpServer', x=140,06, y=5,13, z=71,63], EntityItem['item.item.seeds'/154, l='MpServer', x=138,53, y=5,13, z=72,16], EntitySlime['Slime'/155, l='MpServer', x=140,67, y=5,39, z=73,58], EntitySlime['Slime'/157, l='MpServer', x=149,33, y=4,00, z=37,71], EntityItem['item.item.seeds'/158, l='MpServer', x=183,31, y=5,13, z=45,78], EntityItem['item.item.seeds'/159, l='MpServer', x=183,25, y=5,13, z=46,63], EntitySlime['Slime'/160, l='MpServer', x=166,04, y=4,02, z=61,61], EntitySlime['Slime'/161, l='MpServer', x=160,70, y=4,02, z=62,84], EntitySlime['Slime'/162, l='MpServer', x=185,23, y=5,23, z=28,00], EntitySlime['Slime'/163, l='MpServer', x=187,11, y=4,62, z=18,34], EntityItem['item.item.wheat'/164, l='MpServer', x=177,59, y=5,13, z=51,13], EntityItem['item.item.seeds'/165, l='MpServer', x=179,44, y=5,13, z=50,75], EntityItem['item.item.seeds'/166, l='MpServer', x=183,63, y=5,13, z=48,81], EntityItem['item.item.seeds'/167, l='MpServer', x=179,91, y=5,13, z=49,47], EntitySlime['Slime'/168, l='MpServer', x=180,31, y=5,83, z=60,31], EntityItem['item.item.wheat'/169, l='MpServer', x=180,41, y=5,13, z=49,41], EntityItem['item.item.seeds'/170, l='MpServer', x=182,16, y=5,13, z=51,41], EntityItem['item.item.carrots'/171, l='MpServer', x=133,25, y=5,13, z=45,16], EntityItem['item.item.potato'/172, l='MpServer', x=131,69, y=4,13, z=47,69], EntitySlime['Slime'/173, l='MpServer', x=176,46, y=4,73, z=16,23], EntityItem['item.item.carrots'/174, l='MpServer', x=127,13, y=4,13, z=53,88], EntityItem['item.item.potato'/175, l='MpServer', x=135,91, y=4,13, z=51,93], EntityItem['item.item.wheat'/176, l='MpServer', x=140,80, y=5,13, z=53,50], EntityItem['item.item.seeds'/177, l='MpServer', x=137,26, y=4,13, z=55,65], EntityItem['item.item.seeds'/178, l='MpServer', x=140,49, y=5,13, z=52,84], EntityItem['item.item.potato'/179, l='MpServer', x=135,68, y=4,13, z=48,56], EntityItem['item.item.potato'/180, l='MpServer', x=131,66, y=5,13, z=50,92], EntityItem['item.item.potato'/181, l='MpServer', x=135,21, y=4,13, z=48,34], EntitySlime['Slime'/182, l='MpServer', x=138,84, y=5,57, z=52,26], EntitySlime['Slime'/183, l='MpServer', x=130,25, y=4,85, z=20,61], EntitySlime['Slime'/184, l='MpServer', x=183,36, y=5,05, z=3,59], EntitySlime['Slime'/185, l='MpServer', x=204,32, y=3,00, z=22,77], EntityItem['item.item.potato'/186, l='MpServer', x=194,33, y=4,13, z=53,03], EntityItem['item.item.potato'/187, l='MpServer', x=196,81, y=4,13, z=49,13], EntityItem['item.item.seeds'/188, l='MpServer', x=180,13, y=4,13, z=77,88], EntityItem['item.item.wheat'/189, l='MpServer', x=180,13, y=4,13, z=75,66], EntityItem['item.item.seeds'/190, l='MpServer', x=180,44, y=4,13, z=75,06], EntityItem['item.item.wheat'/191, l='MpServer', x=178,25, y=5,13, z=71,41], EntityItem['item.item.seeds'/192, l='MpServer', x=175,06, y=4,13, z=72,53], EntitySlime['Slime'/193, l='MpServer', x=186,50, y=4,00, z=64,28], EntityItem['item.item.seeds'/194, l='MpServer', x=180,18, y=4,13, z=74,84], EntitySlime['Slime'/195, l='MpServer', x=112,68, y=4,39, z=41,58], EntitySlime['Slime'/196, l='MpServer', x=115,35, y=4,85, z=39,29], EntityItem['item.item.rottenFlesh'/197, l='MpServer', x=152,13, y=4,13, z=81,53], EntityVillager['Villager'/198, l='MpServer', x=151,44, y=2,00, z=84,78], EntityVillager['Villager'/199, l='MpServer', x=159,91, y=4,00, z=92,00], EntityItem['item.item.carrots'/200, l='MpServer', x=131,39, y=5,13, z=50,39], EntityItem['item.item.carrots'/201, l='MpServer', x=127,72, y=5,13, z=51,47], EntitySlime['Slime'/202, l='MpServer', x=126,76, y=4,00, z=16,05], EntitySlime['Slime'/203, l='MpServer', x=158,28, y=3,00, z=-3,22], EntityItem['item.item.carrots'/204, l='MpServer', x=123,81, y=4,13, z=77,72], EntityItem['item.item.carrots'/205, l='MpServer', x=127,13, y=4,13, z=79,28], EntitySlime['Slime'/206, l='MpServer', x=138,99, y=4,00, z=-4,26], EntitySlime['Slime'/207, l='MpServer', x=158,88, y=6,00, z=97,50], EntitySlime['Slime'/208, l='MpServer', x=190,19, y=4,83, z=107,95], EntitySlime['Slime'/209, l='MpServer', x=188,72, y=4,00, z=99,26], EntitySlime['Slime'/210, l='MpServer', x=119,35, y=3,00, z=-7,14], EntitySlime['Slime'/211, l='MpServer', x=115,94, y=5,08, z=-7,96], EntitySlime['Slime'/212, l='MpServer', x=206,92, y=4,39, z=83,48], EntitySlime['Slime'/213, l='MpServer', x=104,00, y=5,06, z=74,17], EntitySlime['Slime'/214, l='MpServer', x=193,80, y=4,11, z=-20,17], EntitySlime['Slime'/215, l='MpServer', x=205,34, y=4,41, z=-21,09], EntitySlime['Slime'/216, l='MpServer', x=201,51, y=4,00, z=-29,10], EntitySlime['Slime'/217, l='MpServer', x=119,06, y=3,00, z=112,35], EntitySlime['Slime'/218, l='MpServer', x=113,29, y=5,09, z=98,50], EntitySlime['Slime'/219, l='MpServer', x=97,63, y=4,68, z=80,72], EntitySlime['Slime'/220, l='MpServer', x=109,78, y=4,00, z=83,88], EntitySlime['Slime'/221, l='MpServer', x=93,81, y=4,00, z=44,23], EntitySlime['Slime'/222, l='MpServer', x=106,91, y=4,00, z=-4,82], EntitySlime['Slime'/223, l='MpServer', x=207,78, y=4,00, z=-24,06], EntitySlime['Slime'/224, l='MpServer', x=233,73, y=4,02, z=89,59], EntitySlime['Slime'/228, l='MpServer', x=189,22, y=5,00, z=113,07], EntitySlime['Slime'/229, l='MpServer', x=183,63, y=5,62, z=112,63], EntitySlime['Slime'/234, l='MpServer', x=199,76, y=4,00, z=-46,54], EntitySlime['Slime'/235, l='MpServer', x=102,58, y=5,08, z=-30,99], EntitySlime['Slime'/236, l='MpServer', x=222,13, y=4,99, z=-43,00], EntitySlime['Slime'/243, l='MpServer', x=97,33, y=4,00, z=-30,59], EntityClientPlayerMP['Player472'/156, l='MpServer', x=161,88, y=5,62, z=32,88], EntitySlime['Slime'/244, l='MpServer', x=82,52, y=4,00, z=-30,26], EntitySlime['Slime'/245, l='MpServer', x=94,23, y=4,57, z=-19,42], EntitySlime['Slime'/253, l='MpServer', x=82,14, y=4,00, z=-40,07]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 624668064 bytes (595 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.2.3} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 23.20.16.4973' Renderer: 'Intel(R) HD Graphics 630'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 630 GL version 4.5.0 - Build 23.20.16.4973, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

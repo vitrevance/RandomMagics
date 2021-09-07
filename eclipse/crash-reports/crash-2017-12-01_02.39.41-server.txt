@@ -1,0 +1,75 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 01.12.17 2:39
+Description: Exception initializing level
+
+java.lang.NullPointerException: Exception initializing level
+	at net.minecraft.world.biome.WorldChunkManager.findBiomePosition(WorldChunkManager.java:250)
+	at net.minecraft.world.WorldServer.createSpawnPosition(WorldServer.java:777)
+	at net.minecraft.world.WorldServer.initialize(WorldServer.java:757)
+	at net.minecraft.world.World.<init>(World.java:296)
+	at net.minecraft.world.WorldServer.<init>(WorldServer.java:102)
+	at net.minecraft.world.WorldServerMulti.<init>(WorldServerMulti.java:14)
+	at net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:66)
+	at net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:96)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.world.biome.WorldChunkManager.findBiomePosition(WorldChunkManager.java:250)
+	at net.minecraft.world.WorldServer.createSpawnPosition(WorldServer.java:777)
+	at net.minecraft.world.WorldServer.initialize(WorldServer.java:757)
+
+-- Affected level --
+Details:
+	Level name: New World12183
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 0 Drop: 0
+	Level seed: 1857144253655323684
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.world.World.<init>(World.java:296)
+	at net.minecraft.world.WorldServer.<init>(WorldServer.java:102)
+	at net.minecraft.world.WorldServerMulti.<init>(WorldServerMulti.java:14)
+	at net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:66)
+	at net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:96)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_152, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 867490288 bytes (827 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 27, tcache: 95, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAA	randommagics{0.1} [RandomMagics] (bin) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

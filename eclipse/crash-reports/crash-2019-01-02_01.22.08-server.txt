@@ -1,0 +1,108 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 02.01.19 1:22
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at net.minecraft.entity.Entity.copyLocationAndAnglesFrom(Entity.java:2349)
+	at randommagics.entities.ai.AITeleortRapidly.updateTask(AITeleortRapidly.java:82)
+	at net.minecraft.entity.ai.EntityAITasks.onUpdateTasks(EntityAITasks.java:125)
+	at net.minecraft.entity.EntityLiving.updateAITasks(EntityLiving.java:613)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:1983)
+	at net.minecraft.entity.EntityLiving.onLivingUpdate(EntityLiving.java:431)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:39)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1816)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at randommagics.entities.mobs.EntitySupremeDemon.onUpdate(EntitySupremeDemon.java:99)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.entity.Entity.copyLocationAndAnglesFrom(Entity.java:2349)
+	at randommagics.entities.ai.AITeleortRapidly.updateTask(AITeleortRapidly.java:82)
+	at net.minecraft.entity.ai.EntityAITasks.onUpdateTasks(EntityAITasks.java:125)
+	at net.minecraft.entity.EntityLiving.updateAITasks(EntityLiving.java:613)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:1983)
+	at net.minecraft.entity.EntityLiving.onLivingUpdate(EntityLiving.java:431)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:39)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1816)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at randommagics.entities.mobs.EntitySupremeDemon.onUpdate(EntitySupremeDemon.java:99)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: randommagics.EntitySupremeDemon (randommagics.entities.mobs.EntitySupremeDemon)
+	Entity ID: 896
+	Entity Name: entity.randommagics.EntitySupremeDemon.name
+	Entity's Exact location: 752,31, 4,75, -817,98
+	Entity's Block location: World: (752,4,-818), Chunk: (at 0,0,14 in 47,-52; contains blocks 752,0,-832 to 767,255,-817), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
+	Entity's Momentum: 0,00, 0,00, 0,00
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: test
+	All players: 1 total; [EntityPlayerMP['Player251'/271, l='test', x=752,28, y=4,00, z=-817,51]]
+	Chunk stats: ServerChunkCache: 1208 Drop: 0
+	Level seed: -7503650778609268697
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (490,4,-640), Chunk: (at 10,0,0 in 30,-40; contains blocks 480,0,-640 to 495,255,-625), Region: (0,-2; contains chunks 0,-64 to 31,-33, blocks 0,0,-1024 to 511,255,-513)
+	Level time: 140359 game time, 1207 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 64845 (now: false), thunder time: 113481 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 705284568 bytes (672 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.2.8} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player251'/271, l='test', x=752,28, y=4,00, z=-817,51]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

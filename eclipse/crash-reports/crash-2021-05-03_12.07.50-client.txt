@@ -1,0 +1,121 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 03.05.21 12:07
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at thaumcraft.client.lib.RenderEventHandler.drawTagsOnContainer(RenderEventHandler.java:312)
+	at thaumcraft.client.lib.RenderEventHandler.blockHighlight(RenderEventHandler.java:194)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_54_RenderEventHandler_blockHighlight_DrawBlockHighlightEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.onDrawBlockHighlight(ForgeHooksClient.java:256)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1330)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1087)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at thaumcraft.client.lib.RenderEventHandler.drawTagsOnContainer(RenderEventHandler.java:312)
+	at thaumcraft.client.lib.RenderEventHandler.blockHighlight(RenderEventHandler.java:194)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_54_RenderEventHandler_blockHighlight_DrawBlockHighlightEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.onDrawBlockHighlight(ForgeHooksClient.java:256)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1330)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player507'/159, l='MpServer', x=-659,68, y=5,62, z=102,82]]
+	Chunk stats: MultiplayerChunkCache: 225, 225
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-685,4,107), Chunk: (at 3,0,11 in -43,6; contains blocks -688,0,96 to -673,255,111), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Level time: 2175057 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 131 total; [EntitySlime['Slime'/17, l='MpServer', x=-731,96, y=4,00, z=164,06], EntitySlime['Slime'/18, l='MpServer', x=-719,60, y=5,00, z=60,10], EntitySlime['Slime'/19, l='MpServer', x=-709,77, y=4,00, z=83,00], EntitySlime['Slime'/20, l='MpServer', x=-732,69, y=1,00, z=101,31], EntitySlime['Slime'/21, l='MpServer', x=-723,69, y=4,00, z=29,88], EntitySlime['Slime'/22, l='MpServer', x=-709,61, y=2,95, z=156,31], EntitySlime['Slime'/23, l='MpServer', x=-707,69, y=4,00, z=145,51], EntitySlime['Slime'/24, l='MpServer', x=-707,69, y=4,00, z=150,50], EntityItem['item.item.slimeball'/25, l='MpServer', x=-707,06, y=4,13, z=147,03], EntitySlime['Slime'/27, l='MpServer', x=-666,81, y=4,00, z=153,53], EntityItem['item.item.dice'/28, l='MpServer', x=-657,31, y=4,13, z=116,41], EntityItem['item.item.dice'/29, l='MpServer', x=-657,81, y=4,13, z=114,47], EntityItem['item.item.dice'/30, l='MpServer', x=-657,66, y=4,13, z=114,66], EntityItem['item.item.dice'/31, l='MpServer', x=-658,94, y=4,13, z=114,69], EntityItem['item.item.dice'/32, l='MpServer', x=-661,06, y=4,13, z=116,06], EntityItem['item.item.dice'/33, l='MpServer', x=-661,47, y=4,13, z=115,19], EntityItem['item.item.dice'/34, l='MpServer', x=-661,63, y=4,13, z=116,22], EntityItem['item.item.dice'/35, l='MpServer', x=-661,97, y=4,13, z=114,53], EntityItem['item.item.dice'/36, l='MpServer', x=-667,97, y=4,13, z=114,25], EntityItem['item.item.dice'/37, l='MpServer', x=-667,47, y=5,13, z=116,59], EntityItem['item.item.dice'/39, l='MpServer', x=-650,63, y=4,13, z=106,38], EntityItem['item.item.dice'/40, l='MpServer', x=-646,22, y=4,13, z=103,53], EntityItem['item.item.dice'/41, l='MpServer', x=-647,66, y=4,13, z=106,84], EntityItem['item.item.dice'/42, l='MpServer', x=-644,53, y=4,13, z=105,16], EntityItem['item.item.dice'/43, l='MpServer', x=-646,47, y=4,13, z=104,94], EntityItem['item.item.dice'/44, l='MpServer', x=-648,25, y=4,13, z=110,66], EntityItem['item.item.dice'/45, l='MpServer', x=-648,88, y=4,13, z=110,44], EntityItem['item.item.dice'/46, l='MpServer', x=-646,88, y=4,13, z=109,59], EntityItem['item.item.dice'/47, l='MpServer', x=-650,69, y=4,13, z=108,72], EntityItem['item.item.dice'/48, l='MpServer', x=-642,91, y=4,13, z=109,66], EntityItem['item.item.dice'/49, l='MpServer', x=-646,69, y=4,13, z=109,47], EntityItem['item.item.dice'/50, l='MpServer', x=-650,31, y=4,13, z=108,38], EntityItem['item.item.dice'/51, l='MpServer', x=-645,69, y=4,13, z=111,38], EntityItem['item.item.dice'/52, l='MpServer', x=-640,09, y=4,13, z=105,63], EntityItem['item.item.dice'/53, l='MpServer', x=-645,56, y=4,13, z=121,16], EntityItem['item.item.dice'/54, l='MpServer', x=-650,19, y=4,13, z=113,63], EntityItem['item.item.dice'/55, l='MpServer', x=-651,16, y=4,13, z=116,94], EntitySlime['Slime'/51511, l='MpServer', x=-597,42, y=4,82, z=37,90], EntityItem['item.item.dice'/56, l='MpServer', x=-652,56, y=4,13, z=114,06], EntityItem['item.item.dice'/57, l='MpServer', x=-650,19, y=4,13, z=114,84], EntitySlime['Slime'/74040, l='MpServer', x=-588,46, y=4,00, z=26,31], EntityItem['item.item.dice'/58, l='MpServer', x=-654,47, y=4,13, z=115,06], EntityItem['item.item.dice'/59, l='MpServer', x=-650,72, y=4,13, z=115,09], EntityItem['item.item.dice'/60, l='MpServer', x=-653,38, y=4,13, z=114,63], EntityItem['item.item.dice'/61, l='MpServer', x=-651,13, y=4,13, z=112,75], EntityItem['item.item.dice'/62, l='MpServer', x=-652,84, y=4,13, z=116,13], EntityItem['item.item.dice'/63, l='MpServer', x=-651,81, y=4,13, z=115,28], EntityItem['item.item.dice'/64, l='MpServer', x=-653,66, y=4,13, z=113,03], EntityItem['item.item.dice'/65, l='MpServer', x=-655,97, y=4,13, z=115,28], EntityItem['item.item.dice'/66, l='MpServer', x=-654,59, y=4,13, z=117,44], EntityItem['item.item.dice'/67, l='MpServer', x=-654,69, y=4,13, z=117,34], EntityItem['item.item.dice'/68, l='MpServer', x=-647,78, y=4,13, z=122,94], EntityItem['item.item.dice'/69, l='MpServer', x=-644,31, y=4,13, z=123,47], EntityItem['item.item.dice'/70, l='MpServer', x=-644,81, y=4,13, z=124,47], EntityItem['item.item.dice'/71, l='MpServer', x=-646,22, y=4,13, z=120,16], EntityItem['item.item.dice'/72, l='MpServer', x=-647,13, y=4,13, z=125,22], EntityItem['item.item.dice'/73, l='MpServer', x=-645,09, y=4,13, z=119,19], EntityItem['item.item.dice'/74, l='MpServer', x=-644,94, y=4,13, z=114,78], EntityItem['item.item.dice'/75, l='MpServer', x=-641,31, y=5,13, z=115,84], EntityItem['item.item.dice'/76, l='MpServer', x=-653,88, y=4,13, z=119,91], EntityItem['item.item.dice'/77, l='MpServer', x=-640,41, y=4,13, z=121,28], EntityItem['item.item.dice'/78, l='MpServer', x=-641,75, y=4,13, z=122,41], EntityItem['item.item.dice'/79, l='MpServer', x=-647,22, y=4,13, z=113,09], EntityItem['item.item.dice'/80, l='MpServer', x=-641,97, y=4,13, z=120,06], EntityItem['item.item.dice'/81, l='MpServer', x=-646,94, y=4,13, z=123,38], EntityItem['item.item.dice'/82, l='MpServer', x=-649,59, y=4,13, z=115,75], EntityItem['item.item.dice'/83, l='MpServer', x=-648,16, y=4,13, z=124,41], EntityItem['item.item.dice'/84, l='MpServer', x=-640,31, y=4,13, z=120,44], EntityItem['item.item.dice'/85, l='MpServer', x=-645,16, y=4,13, z=120,19], EntityItem['item.item.dice'/86, l='MpServer', x=-651,31, y=4,13, z=122,56], EntityItem['item.item.dice'/87, l='MpServer', x=-640,53, y=4,13, z=113,34], EntityItem['item.item.dice'/88, l='MpServer', x=-643,38, y=4,13, z=113,28], EntityItem['item.item.dice'/89, l='MpServer', x=-640,06, y=4,13, z=114,38], EntityItem['item.item.dice'/90, l='MpServer', x=-640,88, y=4,13, z=117,97], EntityItem['item.item.dice'/91, l='MpServer', x=-642,44, y=4,13, z=117,13], EntityItem['item.item.dice'/92, l='MpServer', x=-643,78, y=5,13, z=115,78], EntityItem['item.item.dice'/93, l='MpServer', x=-649,97, y=4,13, z=112,56], EntityItem['item.item.slimeball'/94, l='MpServer', x=-655,47, y=4,13, z=116,78], EntitySlime['Slime'/96, l='MpServer', x=-658,96, y=4,00, z=170,01], EntitySlime['Slime'/98, l='MpServer', x=-649,59, y=4,00, z=26,81], EntityItem['item.item.dice'/99, l='MpServer', x=-635,53, y=4,13, z=110,81], EntityItem['item.item.dice'/100, l='MpServer', x=-638,41, y=4,13, z=110,19], EntityItem['item.item.dice'/101, l='MpServer', x=-636,63, y=4,13, z=106,84], EntityItem['item.item.dice'/102, l='MpServer', x=-635,22, y=4,13, z=110,88], EntityItem['item.item.dice'/103, l='MpServer', x=-636,75, y=4,13, z=106,34], EntityItem['item.item.dice'/104, l='MpServer', x=-632,84, y=4,13, z=108,44], EntityItem['item.item.dice'/105, l='MpServer', x=-632,88, y=4,13, z=110,03], EntityItem['item.item.dice'/106, l='MpServer', x=-638,31, y=4,13, z=104,25], EntitySlime['Slime'/107, l='MpServer', x=-635,50, y=4,00, z=79,94], EntityItem['item.item.dice'/108, l='MpServer', x=-636,81, y=4,13, z=117,28], EntityItem['item.item.dice'/109, l='MpServer', x=-634,19, y=4,13, z=116,38], EntityItem['item.item.dice'/110, l='MpServer', x=-635,72, y=4,13, z=119,34], EntityItem['item.item.dice'/111, l='MpServer', x=-626,81, y=4,13, z=116,53], EntityItem['item.item.dice'/112, l='MpServer', x=-626,06, y=4,13, z=115,81], EntityItem['item.item.dice'/113, l='MpServer', x=-626,88, y=4,13, z=116,72], EntityItem['item.item.dice'/114, l='MpServer', x=-634,03, y=4,13, z=116,47], EntityItem['item.item.dice'/115, l='MpServer', x=-634,16, y=4,13, z=114,97], EntityItem['item.item.dice'/116, l='MpServer', x=-631,94, y=4,13, z=115,19], EntityItem['item.item.dice'/117, l='MpServer', x=-633,47, y=4,13, z=115,94], EntityItem['item.item.dice'/118, l='MpServer', x=-632,72, y=4,13, z=117,06], EntityItem['item.item.dice'/119, l='MpServer', x=-624,19, y=4,13, z=116,19], EntityItem['item.item.dice'/120, l='MpServer', x=-636,78, y=4,13, z=121,88], EntityItem['item.item.dice'/121, l='MpServer', x=-636,94, y=4,13, z=119,56], EntityItem['item.item.dice'/122, l='MpServer', x=-638,41, y=4,13, z=118,91], EntitySlime['Slime'/79739, l='MpServer', x=-720,69, y=4,00, z=182,19], EntityItem['item.item.dice'/123, l='MpServer', x=-633,22, y=4,13, z=123,16], EntityItem['item.item.dice'/124, l='MpServer', x=-634,81, y=4,13, z=116,66], EntityItem['item.item.dice'/125, l='MpServer', x=-634,78, y=4,13, z=115,44], EntityItem['item.item.dice'/126, l='MpServer', x=-635,47, y=4,13, z=113,91], EntityItem['item.item.dice'/127, l='MpServer', x=-633,81, y=4,13, z=114,28], EntityItem['item.item.dice'/128, l='MpServer', x=-633,09, y=4,13, z=115,06], EntityItem['item.item.dice'/129, l='MpServer', x=-633,94, y=4,13, z=113,28], EntityItem['item.item.dice'/130, l='MpServer', x=-633,69, y=4,13, z=116,06], EntityItem['item.item.dice'/131, l='MpServer', x=-620,97, y=4,13, z=115,44], EntityItem['item.item.dice'/132, l='MpServer', x=-621,41, y=4,13, z=114,81], EntityItem['item.item.dice'/133, l='MpServer', x=-623,66, y=4,13, z=114,94], EntityItem['item.item.dice'/134, l='MpServer', x=-611,75, y=4,13, z=116,19], EntityItem['item.item.dice'/135, l='MpServer', x=-610,94, y=4,13, z=115,28], EntitySlime['Slime'/136, l='MpServer', x=-596,24, y=4,00, z=126,28], EntitySlime['Slime'/137, l='MpServer', x=-590,78, y=4,69, z=152,82], EntitySlime['Slime'/138, l='MpServer', x=-608,14, y=4,00, z=124,91], EntitySlime['Slime'/141, l='MpServer', x=-597,63, y=4,00, z=177,91], EntitySlime['Slime'/144, l='MpServer', x=-580,31, y=4,00, z=67,47], EntitySlime['Slime'/145, l='MpServer', x=-583,09, y=4,00, z=104,28], EntitySlime['Slime'/147, l='MpServer', x=-598,73, y=4,00, z=166,09], EntitySlime['Slime'/148, l='MpServer', x=-585,14, y=5,06, z=41,25], EntitySlime['Slime'/152, l='MpServer', x=-593,96, y=4,60, z=171,68], EntityClientPlayerMP['Player507'/159, l='MpServer', x=-659,68, y=5,62, z=102,82], EntitySlime['Slime'/16303, l='MpServer', x=-633,96, y=4,47, z=92,61], EntitySlime['Slime'/91587, l='MpServer', x=-711,72, y=4,00, z=182,75], EntitySlime['Slime'/100550, l='MpServer', x=-668,58, y=4,62, z=133,93]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_271, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 718099144 bytes (684 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 18 mods loaded, 18 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.8} [RandomMagics] (bin) 
+	UCHIJAAAA	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UCHIJAAAA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJAAAA	Avaritia{1.13} [Avaritia] (Avaritia-1.13.jar) 
+	UCHIJAAAA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	tcnodetracker{1.1.2} [TC Node Tracker] (tcnodetracker-1.7.10-1.1.2_UNOFFICIAL_TEELEPORT.jar) 
+	UCHIJAAAA	thaumicenergistics{1.1.3.0} [Thaumic Energistics] (thaumicenergistics-1.1.3.0.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 27.20.100.8853' Renderer: 'Intel(R) HD Graphics 630'
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BuildCraftCore:OFF, BuildCraftTransport:OFF, BuildCraftBuilder:OFF, RF:OFF, RFItem:OFF, MFR:OFF, DSU:OFF, FZ:OFF, FMP:OFF, RB:OFF, CLApi:OFF, Waila:OFF, InvTweaks:OFF, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF, OpenComputers:OFF, PneumaticCraft:OFF
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 630 GL version 4.6.0 - Build 27.20.100.8853, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

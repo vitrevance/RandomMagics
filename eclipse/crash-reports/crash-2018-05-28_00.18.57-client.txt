@@ -1,0 +1,108 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 28.05.18 0:18
+Description: Updating screen events
+
+java.lang.ClassCastException: net.minecraft.client.entity.EntityClientPlayerMP cannot be cast to net.minecraft.entity.player.EntityPlayerMP
+	at randommagics.dimensions.CustomTeleporter.teleportToDimension(CustomTeleporter.java:43)
+	at randommagics.gui.GuiEldArmor.actionPerformed(GuiEldArmor.java:113)
+	at net.minecraft.client.gui.GuiScreen.mouseClicked(GuiScreen.java:252)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:344)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1731)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at randommagics.dimensions.CustomTeleporter.teleportToDimension(CustomTeleporter.java:43)
+	at randommagics.gui.GuiEldArmor.actionPerformed(GuiEldArmor.java:113)
+	at net.minecraft.client.gui.GuiScreen.mouseClicked(GuiScreen.java:252)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:344)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+
+-- Affected screen --
+Details:
+	Screen name: randommagics.gui.GuiEldArmor
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player142'/206, l='MpServer', x=-17,18, y=13,62, z=8,87]]
+	Chunk stats: MultiplayerChunkCache: 465, 465
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (8,64,8), Chunk: (at 8,4,8 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 332721 game time, 15809 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 53 total; [EntityPigZombie['Zombie Pigman'/168202, l='MpServer', x=62,50, y=54,00, z=49,50], EntityPigZombie['Zombie Pigman'/168203, l='MpServer', x=62,34, y=54,00, z=47,34], EntityPigZombie['Zombie Pigman'/168206, l='MpServer', x=-78,38, y=32,00, z=-20,72], EntityPigZombie['Fiery Zombie Pigman'/168207, l='MpServer', x=-34,40, y=89,00, z=50,06], EntityPigZombie['Zombie Pigman'/168204, l='MpServer', x=-75,50, y=32,00, z=-25,50], EntityPigZombie['Zombie Pigman'/168205, l='MpServer', x=-79,69, y=32,00, z=-21,13], EntityPigZombie['Zombie Pigman'/168210, l='MpServer', x=-45,53, y=91,00, z=49,68], EntityPigZombie['Zombie Pigman'/168211, l='MpServer', x=-49,50, y=89,00, z=46,28], EntityPigZombie['Zombie Pigman'/168208, l='MpServer', x=-40,37, y=89,00, z=44,47], EntityPigZombie['Zombie Pigman'/168214, l='MpServer', x=-40,25, y=89,00, z=46,52], EntityPigZombie['Zombie Pigman'/168215, l='MpServer', x=38,63, y=40,00, z=36,44], EntityPigZombie['Zombie Pigman'/168212, l='MpServer', x=-40,95, y=89,00, z=45,58], EntityPigZombie['Zombie Pigman'/168213, l='MpServer', x=-37,36, y=89,00, z=48,20], EntityPigZombie['Zombie Pigman'/168218, l='MpServer', x=-37,50, y=87,00, z=-43,50], EntityPigZombie['Zombie Pigman'/168219, l='MpServer', x=-40,16, y=88,00, z=-42,03], EntityPigZombie['Zombie Pigman'/168222, l='MpServer', x=-88,50, y=60,00, z=60,50], EntityClientPlayerMP['Player142'/206, l='MpServer', x=-17,18, y=13,62, z=8,87], EntityPigZombie['Zombie Pigman'/168220, l='MpServer', x=-42,50, y=89,00, z=-48,50], EntityPigZombie['Zombie Pigman'/168221, l='MpServer', x=47,71, y=52,00, z=-69,30], EntitySlime['Slime'/168098, l='MpServer', x=-16,81, y=12,00, z=11,72], EntitySlime['Slime'/168099, l='MpServer', x=-13,51, y=12,00, z=5,56], EntitySheep['Sheep'/168096, l='MpServer', x=-14,69, y=12,00, z=7,28], EntitySlime['Slime'/168097, l='MpServer', x=-18,29, y=13,08, z=9,33], EntitySlime['Slime'/168102, l='MpServer', x=-14,46, y=13,07, z=8,41], EntitySlime['Slime'/168103, l='MpServer', x=-18,00, y=13,47, z=5,26], EntitySlime['Slime'/168101, l='MpServer', x=-16,96, y=12,32, z=7,49], EntitySlime['Slime'/168106, l='MpServer', x=-20,86, y=12,00, z=7,33], EntitySheep['Sheep'/168107, l='MpServer', x=-14,00, y=12,00, z=9,47], EntitySlime['Slime'/168104, l='MpServer', x=-15,62, y=11,00, z=7,89], EntitySlime['Slime'/168105, l='MpServer', x=-16,52, y=12,52, z=8,82], EntityFireBat['Firebat'/168238, l='MpServer', x=22,05, y=32,79, z=18,85], EntityPigZombie['Zombie Pigman'/168239, l='MpServer', x=27,50, y=35,00, z=19,50], EntityPigZombie['Zombie Pigman'/168242, l='MpServer', x=27,44, y=36,00, z=22,65], EntityPigZombie['Zombie Pigman'/168240, l='MpServer', x=24,02, y=32,00, z=21,67], EntityPigZombie['Zombie Pigman'/168241, l='MpServer', x=25,39, y=36,00, z=24,21], EntityFireBat['Firebat'/168247, l='MpServer', x=-12,20, y=82,80, z=65,91], EntityWisp['Wisp'/168245, l='MpServer', x=-0,45, y=39,74, z=23,25], EntityPigZombie['Zombie Pigman'/168250, l='MpServer', x=-56,66, y=39,00, z=81,34], EntityPigZombie['Zombie Pigman'/168251, l='MpServer', x=-60,09, y=39,00, z=87,56], EntityPigZombie['Zombie Pigman'/168248, l='MpServer', x=-20,09, y=84,00, z=51,34], EntityPigZombie['Zombie Pigman'/168249, l='MpServer', x=-19,50, y=84,00, z=54,50], EntityPigZombie['Zombie Pigman'/168254, l='MpServer', x=-38,78, y=90,00, z=-19,63], EntityPigZombie['Zombie Pigman'/168255, l='MpServer', x=-38,88, y=90,00, z=-18,75], EntityPigZombie['Zombie Pigman'/168253, l='MpServer', x=-37,50, y=90,00, z=-20,50], EntityPigZombie['Zombie Pigman'/168138, l='MpServer', x=-6,88, y=97,00, z=-53,16], EntityPigZombie['Zombie Pigman'/168139, l='MpServer', x=-9,22, y=52,00, z=-0,36], EntityPigZombie['Zombie Pigman'/168137, l='MpServer', x=-7,50, y=37,00, z=-15,50], EntityPigZombie['Zombie Pigman'/168140, l='MpServer', x=-25,10, y=47,69, z=83,31], EntityPigZombie['Zombie Pigman'/168279, l='MpServer', x=40,78, y=38,00, z=7,59], EntityPigZombie['Zombie Pigman'/168277, l='MpServer', x=-50,31, y=38,00, z=-30,50], EntityPigZombie['Zombie Pigman'/168282, l='MpServer', x=-0,75, y=47,00, z=49,91], EntityPigZombie['Zombie Pigman'/168155, l='MpServer', x=-23,88, y=47,00, z=71,84], EntityPigZombie['Zombie Pigman'/168152, l='MpServer', x=-75,07, y=77,00, z=-3,50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_171, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 770131184 bytes (734 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.2.0} [RandomMagics] (bin) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 23.20.16.4973' Renderer: 'Intel(R) HD Graphics 630'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 630 GL version 4.5.0 - Build 23.20.16.4973, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

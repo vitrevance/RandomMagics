@@ -1,0 +1,126 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 18.03.20 19:30
+Description: Unexpected error
+
+java.lang.IllegalArgumentException: value already present: randommagics.customs.Sound@1f05ea68
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:238)
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:215)
+	at net.minecraft.client.audio.SoundManager.playSound(SoundManager.java:398)
+	at net.minecraft.client.audio.SoundHandler.playSound(SoundHandler.java:188)
+	at randommagics.EventHandler.onClientTick(EventHandler.java:302)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_64_EventHandler_onClientTick_ClientTickEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at cpw.mods.fml.common.FMLCommonHandler.onPreClientTick(FMLCommonHandler.java:325)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1678)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:238)
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:215)
+	at net.minecraft.client.audio.SoundManager.playSound(SoundManager.java:398)
+	at net.minecraft.client.audio.SoundHandler.playSound(SoundHandler.java:188)
+	at randommagics.EventHandler.onClientTick(EventHandler.java:302)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_64_EventHandler_onClientTick_ClientTickEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at cpw.mods.fml.common.FMLCommonHandler.onPreClientTick(FMLCommonHandler.java:325)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player238'/562, l='MpServer', x=-6,64, y=249,17, z=35,89]]
+	Chunk stats: MultiplayerChunkCache: 1089, 1089
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (8,64,8), Chunk: (at 8,4,8 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 2163976 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 66 total; [EntityItem['item.tile.sapling.oak'/29739, l='MpServer', x=1,13, y=82,13, z=81,81], EntityItem['item.tile.oreDiamond'/563, l='MpServer', x=5,25, y=68,13, z=1,00], EntityItem['item.tile.oreLapis'/564, l='MpServer', x=1,91, y=67,13, z=0,38], EntityItem['item.tile.oreGold'/565, l='MpServer', x=2,28, y=67,13, z=3,88], EntityItem['item.tile.oreCoal'/566, l='MpServer', x=5,28, y=67,13, z=0,19], EntityItem['item.item.diamond'/567, l='MpServer', x=6,34, y=68,13, z=0,00], EntityItem['item.item.redstone'/568, l='MpServer', x=5,75, y=68,13, z=1,06], EntityItem['item.item.redstone'/569, l='MpServer', x=8,63, y=68,13, z=2,66], EntityItem['item.tile.oreGold'/570, l='MpServer', x=4,56, y=68,13, z=3,78], EntityItem['item.item.redstone'/571, l='MpServer', x=3,28, y=67,13, z=0,16], EntityItem['item.item.lexicon'/572, l='MpServer', x=5,41, y=67,13, z=0,88], EntityXPOrb['Experience Orb'/573, l='MpServer', x=5,22, y=67,25, z=0,38], EntityXPOrb['Experience Orb'/574, l='MpServer', x=5,41, y=67,25, z=0,34], EntityXPOrb['Experience Orb'/575, l='MpServer', x=4,41, y=67,25, z=0,25], EntityClientPlayerMP['Player238'/562, l='MpServer', x=-6,64, y=249,17, z=35,89], EntityItem['item.tile.oreRedstone'/578, l='MpServer', x=-0,41, y=67,13, z=3,19], EntityItem['item.tile.oreIron'/579, l='MpServer', x=7,13, y=68,13, z=-2,69], EntityItem['item.tile.stonebrick'/580, l='MpServer', x=7,88, y=68,13, z=-3,47], EntityItem['item.tile.oreEmerald'/581, l='MpServer', x=4,88, y=67,13, z=-0,63], EntityItem['item.tile.netherquartz'/582, l='MpServer', x=5,59, y=67,13, z=-0,66], EntityItem['item.item.netherquartz'/583, l='MpServer', x=3,84, y=67,13, z=-0,03], EntityItem['item.tile.sapling.oak'/93254, l='MpServer', x=8,74, y=75,13, z=62,82], EntityXPOrb['Experience Orb'/584, l='MpServer', x=6,31, y=68,25, z=-0,50], EntityXPOrb['Experience Orb'/585, l='MpServer', x=5,88, y=68,25, z=-0,06], EntityItem['item.item.pickaxeDiamond'/594, l='MpServer', x=-0,44, y=67,13, z=-2,44], EntityItem['item.tile.sapling.oak'/10851, l='MpServer', x=44,97, y=73,13, z=95,94], EntityItem['item.tile.sapling.oak'/618, l='MpServer', x=18,97, y=74,13, z=42,44], EntityItem['item.tile.flower1.dandelion'/620, l='MpServer', x=43,31, y=68,13, z=-27,47], EntityItem['item.tile.sapling.oak'/628, l='MpServer', x=4,66, y=75,13, z=63,56], EntityItem['item.tile.sapling.oak'/629, l='MpServer', x=0,19, y=71,13, z=55,59], EntityItem['item.tile.sapling.oak'/631, l='MpServer', x=-0,91, y=73,13, z=52,13], EntityItem['item.tile.sapling.oak'/632, l='MpServer', x=-2,13, y=72,13, z=53,16], EntityItem['item.tile.sapling.roofed_oak'/633, l='MpServer', x=-5,53, y=83,13, z=62,50], EntityItem['item.item.pixieDust'/77981, l='MpServer', x=33,50, y=73,13, z=30,56], EntityItem['item.item.pixieDust'/77980, l='MpServer', x=31,53, y=73,13, z=27,50], EntityItem['item.item.pixieDust'/77982, l='MpServer', x=36,34, y=73,13, z=30,78], EntityItem['item.tile.sapling.oak'/704, l='MpServer', x=-9,66, y=73,13, z=75,59], EntityItem['item.tile.sapling.oak'/705, l='MpServer', x=-7,47, y=73,13, z=76,84], EntityItem['item.tile.sapling.oak'/706, l='MpServer', x=-13,56, y=73,13, z=78,03], EntityItem['item.item.pixieDust'/7372, l='MpServer', x=23,41, y=85,13, z=52,81], EntityItem['item.item.pixieDust'/7373, l='MpServer', x=22,59, y=85,13, z=50,81], EntityItem['item.tile.flower2.oxeyeDaisy'/723, l='MpServer', x=-33,72, y=71,13, z=61,19], EntityItem['item.tile.sapling.roofed_oak'/726, l='MpServer', x=-27,59, y=87,13, z=78,38], EntityItem['item.tile.sapling.roofed_oak'/766, l='MpServer', x=2,75, y=73,13, z=92,81], EntityItem['item.tile.sapling.oak'/767, l='MpServer', x=2,34, y=88,13, z=80,31], EntityItem['item.tile.sapling.oak'/27904, l='MpServer', x=-14,44, y=90,13, z=84,13], EntityItem['item.item.apple'/41743, l='MpServer', x=6,88, y=74,13, z=70,78], EntityItem['item.tile.sapling.roofed_oak'/27925, l='MpServer', x=-4,13, y=74,13, z=67,19], EntityItem['item.tile.sapling.oak'/803, l='MpServer', x=35,94, y=73,13, z=95,72], EntityItem['item.tile.sapling.oak'/804, l='MpServer', x=34,81, y=73,13, z=91,06], EntityItem['item.tile.sapling.oak'/805, l='MpServer', x=34,31, y=73,13, z=87,69], EntityItem['item.tile.sapling.oak'/807, l='MpServer', x=32,66, y=73,13, z=92,97], EntityItem['item.tile.sapling.oak'/27439, l='MpServer', x=-25,19, y=72,13, z=93,16], EntityItem['item.tile.flower2.poppy'/822, l='MpServer', x=51,47, y=73,13, z=95,78], EntityItem['item.tile.sapling.oak'/41788, l='MpServer', x=21,75, y=73,13, z=97,28], EntityItem['item.tile.sapling.oak'/16711, l='MpServer', x=35,75, y=73,13, z=93,13], EntityItem['item.tile.sapling.oak'/27497, l='MpServer', x=21,16, y=73,13, z=90,44], EntityItem['item.item.pixieDust'/63857, l='MpServer', x=45,41, y=71,13, z=14,75], EntityItem['item.item.pixieDust'/63858, l='MpServer', x=41,03, y=71,13, z=15,53], EntityItem['item.item.pixieDust'/63859, l='MpServer', x=37,47, y=72,13, z=19,19], EntityItem['item.item.pixieDust'/63860, l='MpServer', x=39,59, y=72,13, z=18,03], EntityItem['item.item.pixieDust'/63861, l='MpServer', x=40,47, y=72,13, z=17,47], EntityFlugel['Fl?gel'/42377, l='MpServer', x=-7,28, y=252,50, z=34,94], EntityItem['item.tile.flower2.poppy'/3486, l='MpServer', x=-62,75, y=147,13, z=20,66], EntityItem['item.tile.sapling.oak'/19371, l='MpServer', x=27,47, y=73,13, z=93,72], EntityItem['item.tile.sapling.oak'/11742, l='MpServer', x=15,88, y=74,13, z=47,22]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 403954024 bytes (385 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 19 mods loaded, 19 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	randommagics{0.3.8} [RandomMagics] (bin) 
+	UCHIJAAAA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	alfheim{BETA-18} [Alfheim] (Alfheim-BETA-18.jar) 
+	UCHIJAAAA	WorldEngine{1.1710.0} [WorldEngine] (Alfheim-BETA-18.jar) 
+	UCHIJAAAA	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UCHIJAAAA	Avaritia{1.13} [Avaritia] (Avaritia-1.13.jar) 
+	UCHIJAAAA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJAAAA	thaumicenergistics{1.1.3.0} [Thaumic Energistics] (thaumicenergistics-1.1.3.0.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 441.41' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BuildCraftCore:OFF, BuildCraftTransport:OFF, BuildCraftBuilder:OFF, RF:OFF, RFItem:OFF, MFR:OFF, DSU:OFF, FZ:OFF, FMP:OFF, RB:OFF, CLApi:OFF, Waila:OFF, InvTweaks:OFF, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF, OpenComputers:OFF, PneumaticCraft:OFF
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 441.41, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

@@ -1,0 +1,131 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 14.07.21 17:18
+Description: Unexpected error
+
+java.lang.IllegalArgumentException: value already present: randommagics.customs.Sound@3e4700e5
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:238)
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:215)
+	at net.minecraft.client.audio.SoundManager.playSound(SoundManager.java:398)
+	at net.minecraft.client.audio.SoundHandler.playSound(SoundHandler.java:188)
+	at randommagics.gui.GuiMinigame.onRenderGameOverlayEventPost(GuiMinigame.java:151)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_137_GuiMinigame_onRenderGameOverlayEventPost_Post.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.GuiIngameForge.post(GuiIngameForge.java:905)
+	at net.minecraftforge.client.GuiIngameForge.renderHUDText(GuiIngameForge.java:724)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:158)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1114)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:238)
+	at com.google.common.collect.HashBiMap.put(HashBiMap.java:215)
+	at net.minecraft.client.audio.SoundManager.playSound(SoundManager.java:398)
+	at net.minecraft.client.audio.SoundHandler.playSound(SoundHandler.java:188)
+	at randommagics.gui.GuiMinigame.onRenderGameOverlayEventPost(GuiMinigame.java:151)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_137_GuiMinigame_onRenderGameOverlayEventPost_Post.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.GuiIngameForge.post(GuiIngameForge.java:905)
+	at net.minecraftforge.client.GuiIngameForge.renderHUDText(GuiIngameForge.java:724)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:158)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player344'/209, l='MpServer', x=-720,04, y=5,62, z=117,95]]
+	Chunk stats: MultiplayerChunkCache: 225, 225
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-685,4,107), Chunk: (at 3,0,11 in -43,6; contains blocks -688,0,96 to -673,255,111), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Level time: 3124459 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 32 total; [EntityChicken['Chicken'/67, l='MpServer', x=-774,44, y=4,00, z=75,53], EntityChicken['Chicken'/68, l='MpServer', x=-766,63, y=4,00, z=66,44], EntitySheep['Sheep'/69, l='MpServer', x=-760,34, y=4,00, z=91,78], EntityClientPlayerMP['Player344'/209, l='MpServer', x=-682,51, y=5,62, z=98,03], EntityPig['Pig'/71, l='MpServer', x=-766,03, y=4,00, z=123,94], EntitySheep['Sheep'/72, l='MpServer', x=-767,84, y=4,00, z=170,19], EntityClientPlayerMP['Player344'/209, l='MpServer', x=-673,47, y=5,62, z=98,42], EntityPig['Pig'/139, l='MpServer', x=-662,94, y=4,00, z=57,09], EntityPig['Pig'/140, l='MpServer', x=-663,75, y=4,00, z=73,84], EntityCow['Cow'/141, l='MpServer', x=-665,13, y=4,00, z=181,59], EntityItem['item.item.egg'/12125940, l='MpServer', x=-774,88, y=4,13, z=63,91], EntityChicken['Chicken'/78, l='MpServer', x=-740,47, y=4,00, z=54,47], EntitySheep['Sheep'/142, l='MpServer', x=-661,97, y=4,00, z=178,06], EntityClientPlayerMP['Player344'/209, l='MpServer', x=-673,78, y=5,62, z=119,70], EntityPig['Pig'/150, l='MpServer', x=-645,84, y=4,00, z=58,63], EntityCow['Cow'/151, l='MpServer', x=-646,78, y=4,00, z=186,69], EntityCow['Cow'/152, l='MpServer', x=-641,72, y=4,00, z=198,69], EntityChicken['Chicken'/90, l='MpServer', x=-735,38, y=4,00, z=42,63], EntityClientPlayerMP['Player344'/209, l='MpServer', x=-720,04, y=5,62, z=117,95], EntityPig['Pig'/102, l='MpServer', x=-721,13, y=4,00, z=47,03], EntityChicken['Chicken'/47, l='MpServer', x=-793,47, y=4,00, z=89,44], EntityHorse['Horse'/48, l='MpServer', x=-787,09, y=4,00, z=157,03], EntityItem['item.item.egg'/12609904, l='MpServer', x=-768,28, y=4,13, z=66,72], EntityHorse['Horse'/49, l='MpServer', x=-790,91, y=4,00, z=187,00], EntityChicken['Chicken'/59, l='MpServer', x=-776,41, y=4,00, z=63,41], EntityClientPlayerMP['Player344'/209, l='MpServer', x=-680,83, y=5,62, z=102,03], EntityChicken['Chicken'/124, l='MpServer', x=-672,44, y=4,00, z=50,41], EntityPig['Pig'/125, l='MpServer', x=-713,50, y=5,00, z=81,31], EntityChicken['Chicken'/61, l='MpServer', x=-782,56, y=4,00, z=83,34], EntityClientPlayerMP['Player344'/209, l='MpServer', x=-674,33, y=5,62, z=105,31], EntityHorse['Horse'/62, l='MpServer', x=-772,94, y=4,88, z=135,84], EntitySheep['Sheep'/63, l='MpServer', x=-776,16, y=4,00, z=168,06]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_271, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 763407232 bytes (728 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 20 mods loaded, 20 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems_1.7.10_1.0.5.120_universal (1).jar) 
+	UCHIJAAAA	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHIJAAAA	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UCHIJAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-deobf-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-deobf-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAA	thaumicenergistics{1.1.3.0} [Thaumic Energistics] (thaumicenergistics-1.1.3.0.jar) 
+	UCHIJAAAA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJAAAA	randommagics{0.4.1} [RandomMagics] (bin) 
+	UCHIJAAAA	Avaritia{1.13} [Avaritia] (Avaritia-1.13.jar) 
+	UCHIJAAAA	BrandonsCore{1.0.0.12} [Brandon's Core] (BrandonsCore-1.0.0.12.jar) 
+	UCHIJAAAA	DraconicEvolution{1.0.2h} [Draconic Evolution] (Draconic-Evolution-1.7.10-1.0.2h.jar) 
+	UCHIJAAAA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-Dev-1.7.10-3.0.10B.jar) 
+	UCHIJAAAA	tcnodetracker{1.1.2} [TC Node Tracker] (tcnodetracker-1.7.10-1.1.2_UNOFFICIAL_TEELEPORT.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit_forge_mc1.7.10_6.1.1_dist.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 27.20.100.8853' Renderer: 'Intel(R) HD Graphics 630'
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BuildCraftCore:OFF, BuildCraftTransport:OFF, BuildCraftBuilder:OFF, RF:ON, RFItem:ON, MFR:OFF, DSU:OFF, FZ:OFF, FMP:OFF, RB:OFF, CLApi:OFF, Waila:OFF, InvTweaks:OFF, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF, OpenComputers:OFF, PneumaticCraft:OFF
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 630 GL version 4.6.0 - Build 27.20.100.8853, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

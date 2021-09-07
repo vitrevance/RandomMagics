@@ -1,0 +1,16 @@
+[
+{
+  "modid": "randommagics",
+  "name": "RandomMagics",
+  "description": "Adds some random magical stuff.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["CreoDen"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

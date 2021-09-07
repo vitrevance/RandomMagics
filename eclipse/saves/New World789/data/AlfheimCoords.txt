@@ -1,0 +1,18 @@
+Salamander start city and players spawnpoint coords:
+0 : 300 : 1000
+Sylph start city and players spawnpoint coords:
+-643 : 300 : 766
+Cait Sith start city and players spawnpoint coords:
+-985 : 300 : 173
+Puca start city and players spawnpoint coords:
+-867 : 300 : -501
+Gnome start city and players spawnpoint coords:
+-343 : 300 : -940
+Leprechaun start city and players spawnpoint coords:
+342 : 300 : -940
+Spriggan start city and players spawnpoint coords:
+866 : 300 : -501
+Undine start city and players spawnpoint coords:
+984 : 300 : 173
+Imp start city and players spawnpoint coords:
+642 : 300 : 766

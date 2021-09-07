@@ -1,0 +1,5 @@
+This is instruction for configuring Alfheim ASM Data in ASMData.cfg
+There will be some numbers, separated with SPACE ([1, 1, 22] by default). Those are:
+1) Health ASM - toggles hooks to vanilla health system. Disable this if you have any issues with other systems (0 - off, 1 - on)
+2) World  ASM - toggles hooks to world class. Disable this if you have some world-related crash (or running Thermos Core) (0 - off, 1 - on)
+3) Elementium Cluster meta - Effective only if Thaumcraft is installed. Change this if some other mod adds own clusters (max value is 63); also edit and spread modified .lang files
